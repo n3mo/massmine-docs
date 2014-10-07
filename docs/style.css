@@ -237,7 +237,7 @@ body{
 }
 
 .gutter {
-	background-image: url('/pix/gutter.gif');
+	/* background-image: url('/pix/gutter.gif'); */
 	background-repeat:repeat-y;
 
 }

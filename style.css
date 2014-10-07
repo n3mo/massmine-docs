@@ -1,0 +1,623 @@
+/* this is the style.css that is actually used by WP */ 
+/* updated 110702 */
+
+.extra-info p{
+    font-family: inherit;
+    line-height: 150%;
+    margin-top: 0.5em;
+    padding: inherit;
+    font-size: 85%;
+}
+
+
+.button-links a, .fontsample {
+	background: #566c93;
+	border: 0px solid #566c93 !important;
+	color: white !important;
+	padding: 4px;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 3px;
+	text-decoration: none !important;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-family: source-sans, Helvetica Neue, Calibri, Helvetica, Arial, sans serif;
+	
+	
+	font-size: 14px  !important;
+	font-weight: normal;
+	line-height: 34px;
+	
+	border-radius: 14px;
+	-moz-border-radius: 15px;
+
+}
+
+.button-links a:hover, .fontsample:hover {
+	background: #999;
+}
+
+
+.sidebar {
+	position: absolute;
+	top: 90px;
+	left: 700px;
+	width: 280px;
+	background: white;
+}
+
+.sidebar, .sidebar li {
+	font-family: source-sans, Helvetica Neue, Calibri, sans serif;
+	padding: 0px;
+	line-height: 22px;
+	display: block;
+
+	font-size: 17px;
+	font-weight: 300;
+	letter-spacing: 0.3px;
+
+}
+
+
+.sidebar > ul > li > strong {
+	font-weight:600;
+}
+
+.txt-desc#s {
+	margin-left: -3px;
+	padding-left: 3px;
+}
+
+
+li.subhead {
+	font-weight: 400;
+	text-transform: uppercase;
+	font-size: 11pt;
+	letter-spacing: 1px;
+	margin-left: -10px;
+	padding-top: 2px;
+}
+
+.hidden {
+	display: none;
+}
+
+.sidebar p {
+	padding: 0px;
+}
+
+.sidebar ul ul {
+	border: solid 0px #eee;
+	margin: 0px;
+	padding: 0px;
+	padding-left: 25px;
+}
+
+.sidebar li {
+	margin-bottom: 6px;
+	padding-left: 10px;
+}
+
+.sidebar dt {
+        padding-left: 20px;
+	font-size: 11pt;
+}
+
+.sidebar dd {
+        font-size: 9pt;
+}
+
+
+.dquo {
+/* hang punctuation */
+	margin-left: -5px;
+}
+
+.sample .dquo {
+/* unhang punctuation */
+	margin-left: 0px;
+}
+
+
+
+#footer {
+	width: 650px;
+}
+
+.tight {
+	letter-spacing: -3px;
+}
+
+
+.entry-content ul li {
+	padding-bottom: 6px;
+	list-style-type:square;
+}
+
+
+ul.nobullet, .entry-content ul.nobullet li, .entry-content ul.nobullet, .nobullet, ul.nobullet > li {
+	list-style: none;
+	border: 0px solid green;
+}
+
+
+.inlinecaption {
+	font-family: source-sans, Helvetica Neue, Arial, sans serif;
+	font-size: 15px;
+	font-weight: bolder;
+	color: #666;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	margin: 0px;
+	padding: 0px;
+	margin-left: 40px;
+}
+
+.caption {
+	font-family: source-sans, Helvetica Neue, Arial, sans serif;
+	font-size: 15px;
+	font-weight: bolder;
+	color: #666;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	margin: 0px;
+	padding: 0px;
+	margin-top: 10px;
+}
+
+.sample {
+	font-size: 40px;
+	font-family: Charter, New Century Schoolbook, Times New Roman;
+	padding-top: 6px;
+	padding-bottom: 6px;
+
+}
+
+.sample + .sample {
+	padding-top: 0px;
+}
+
+.sample + .caption {
+	padding-top: 12px;
+}
+
+
+.sans {
+	font-family: arial, helvetica neue, Calibri, helvetica, sans serif;
+	font-size: 35px;
+	padding-top: 0px;
+}
+
+.mono {
+	font-family: courier new;
+	font-size: 90%;
+}
+
+.onespace {
+	width: 90%;
+	border: solid 0px green;
+}
+
+p.indented {
+	width: 564px;
+}
+
+.indented, .btw, .onespace {
+		margin-left: 36px;
+		border: solid 0px green;
+}
+
+.btw {
+	padding-top: 20px;
+	padding-bottom: 30px;
+	font-size: 16px;
+	line-height: 24px;
+	margin-right: 30px;
+}
+
+.photo {
+	border: 1px solid gray;
+	margin-right: 6px;
+}
+
+
+
+
+img#wpstats {
+	height:0;
+	width:0;
+	overflow:hidden;
+} 
+
+body{
+	background: white;
+	color:#000;
+	margin:0;
+	padding:0;
+}
+
+.gutter {
+        /* background-image: url('/pix/gutter.gif'); */
+	background-repeat:repeat-y;
+
+}
+
+#wrapper {
+	border: solid 0px red;
+	position: absolute;
+	top: 0px;
+	left: 60px;
+	width:1000px;
+	
+}
+
+#container {
+	margin: 10px;	
+	margin-top: 40px;
+	margin-left: 20px;
+	width: 600px;
+	min-height: 750px;
+	/* IE6 height hack */
+	height:auto !important;
+	height:770px;
+	
+}
+
+
+#header, #footer {
+	border-top: solid 10px;
+	border-color: #838B8B;
+	/* border-radius: 15px; */
+}
+
+#site-footer{
+	margin-top: 30px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	display: table;
+	font-size: 25pt;
+}
+
+.entry-content {
+	width: 600px;
+	padding: 0px;
+}
+
+
+.entry-content a {
+	font-size: 100%;
+	color: #566C93;
+	text-decoration: underline;
+	
+#	border-bottom: 1px solid #77c;
+}
+
+.entry-content a:hover {
+	color: black;
+#	border-bottom: 1px solid black;
+}
+
+.entry-content li {
+
+}
+
+
+
+.typotip {
+	border: solid #999 1px;
+	padding: 14px;
+	background: #faf8f0;
+	margin-top: 12px;
+	margin-bottom: 12px;
+	width: 90%;
+	
+}
+
+.typotip, .typotip p, .typotip li {
+	font-size: 18px;
+	font-family: source-sans, ConcourseMedium, calibri, Gill Sans, sans serif;
+	line-height: 26px;
+}
+
+.glyph {
+	font-family: Arial;
+	margin-left: 3px;
+	margin-right: 3px;
+
+}
+
+
+
+
+
+
+a#selected {
+background: #eee;
+}
+
+
+.entry-date, .entry-meta {
+	display: none;
+}
+
+
+p, li, table#writer_reader > tbody > tr > td  {
+
+	font-family: Charter, Hoefler Text, Cambria, Georgia, Times New Roman, serif;
+	font-size: 19px;
+	line-height: 29px;
+	color: #333;
+
+}
+
+table#writer_reader > tbody > tr > td {
+	text-align: center;
+	white-space: nowrap;
+}
+
+table#writer_reader > tbody > tr > td > p {
+	text-align: left;
+}
+
+
+p, .entry-content ol li {
+	width: 100%;
+	padding: 0px;
+	margin: 0px;
+	margin-top: 18px;
+}
+
+.entry-content ol {
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+.entry-content ol li {
+	# for IE7
+	vertical-align: top;
+	display: list-item;
+	vertical-align: top;
+}
+
+.odd {
+	;
+}
+
+.faded {
+	color: #999;
+}
+
+.hilited {
+	background: #0f0;
+}
+
+
+
+a {
+	color: #667CA3;
+	text-decoration: none;
+}
+
+a:hover {
+	color: black;
+}
+
+h2, h2.entry_title {
+	font-family: 'Equity-Text-B', serif;
+	font-weight: bold;
+	font-size: 28px; /* was 32pt with concourse */
+	line-height: 34px;
+	width: 600px;
+	margin-bottom: 15px;
+	letter-spacing: 0px;
+	color: #333;
+	text-rendering: optimizeLegibility;
+
+}
+
+img {
+	border: 0px solid #999;
+}
+
+#title {
+	border: 0px solid white;
+}
+
+.comment-heading {
+	text-align:right; 
+	text-transform:uppercase;
+	font-family: source-sans, ConcourseMedium, calibri, helvetica, sans serif;
+	font-size: 16px;
+	letter-spacing: 1px;
+	margin-top: 30px;
+}
+
+#comment-area {
+	border-top: solid #333 8px;
+	margin-top: 45px;
+}
+
+.comment-caption {
+	font-family: source-sans, ConcourseMedium, calibri, helvetica, sans serif;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	color: #999;
+	font-size: 16px;
+	margin-top: 10px;
+}
+
+.comment-block, .mb-comment-block {
+	margin-bottom: 2.5em;
+}
+
+.mb-comment-block {
+	border: 1px solid #ddc;
+	padding: 10px;
+	padding-left: 20px;
+	padding-bottom: 15px;
+	padding-top: 0px;
+	margin-left: -20px;
+	margin-right: -10px;
+	background: #faf8f0;
+}
+
+
+input.txt-desc, input.txt, textarea, select {
+	font-family: Charter, Calibri, Helvetica, sans-serif;
+	font-size: 16px;
+	background-color: white;
+	border: 1px solid #DDDDE4;
+	padding: 2px;
+	margin-bottom: 12px;
+
+}
+
+li input.txt-desc, li input.txt, .btw {
+	font-family: source-sans, Helvetica Neue, Calibri, Helvetica, sans-serif;
+	font-weight: 400;
+	letter-spacing: 0.3px;
+
+
+}
+
+input.txt-desc {
+	color: #999999;
+}
+
+
+.button {
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-family: source-sans, ConcourseMedium, Calibri, Helvetica, sans-serif;
+	font-size: 16px;
+	font-weight: bold;
+	color: #667CA3;
+	padding: 2px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.appendix p {
+	font-family: source-sans, Helvetica Neue, Calibri, sans serif;
+	font-size: 0.9em;
+	line-height: 1.4em;
+}
+
+.appendix a {
+	font-weight: normal;
+	border: none;
+}
+
+.appendix strong {
+	color: #555;
+}
+
+
+
+.center {
+	text-align: center;
+}
+
+.icon {
+    float: left; 
+	 padding-right: 8px; 
+	 padding-top:5px; 
+	 width:60px; 
+	 border: 0px;
+}
+.icon a, .icon a:hover { 
+	border: 0px; 
+}
+
+.bookcover, .alix-home, .printshop-home {
+	border:solid #667CA3 2px;
+}
+
+
+.noborder {
+	border: 0px;
+	
+}
+
+.shifty {
+	margin-left: 30px;
+	margin-top: 22px;
+	margin-bottom: 22px;
+}
+
+.shifty a, .shifty a:hover {
+	border: 0px;
+}
+
+.comment-text p, blockquote p {
+	font-size: 18px;
+	line-height: 25px;
+	color: #333;
+}
+
+h3 {
+	margin: 0;
+	padding: 0;
+	margin-top: 20px;
+	margin-bottom: 10px;
+	padding-top: 2px;
+	border-top: 1px solid #ccc;
+	color: #333;
+	font-family: source-sans, Helvetica Neue, Calibri, Arial, Times New Roman, serif;
+}
+
+blockquote, #review-area {
+	background: #f9f9ee;
+	border: 1px solid #ddc;
+	padding: 15px;
+	padding-top: 0px;
+}
+
+#equitybox {
+	background: #f9f9ee;
+	border: 1px solid #ddc;
+	padding: 20px;
+    width: 540px;
+}
+
+#review-area {
+	display: block;
+	background: white; 
+	height: 500px;
+	overflow:scroll;
+	clear: both;
+}
+
+#review-area p {
+	font-size: 18px;
+	line-height: 25px;
+}
+
+#review-area-heading {
+	font-family: source-sans, ConcourseMedium, Gill Sans, sans serif;
+	font-weight: normal;
+	font-size: 24px;
+	line-height: 30px;
+	margin-bottom: 10px;
+
+}
+
+
+.timespage p {
+	font-family: Times;
+	font-size: 18px;
+	line-height: 1.5em;
+} 
+
+
+.codebox {
+
+	font-family: source-sans, ConcourseMedium, Consolas, Monaco, Courier, Courier New;
+	font-size: 30px;
+	border: 1px solid #ccc;
+	padding: 4px;
+}
+
+
+

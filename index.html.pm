@@ -6,15 +6,11 @@
 
 ◊h3{With MassMine You Can:}
 
-◊ul['class:""]{
+◊p['class:"indented"]{Automate access to social media and web data through a flexible interface. MassMine runs on personal computers and dedicated servers.} 
 
-◊li{Automate access to social media and web data through a flexible interface. MassMine runs on personal computers and dedicated servers.} 
-◊br{}
-◊li{Collect current and past data from sources such as Twitter, Facebook, google trends, and Wikipedia. Your data is stored on your own machine.} 
-◊br{}
-◊li{Process and analyze your data to satisfy exploratory and targeted investigations of social media trends and network connectivity.} 
+◊p['class:"indented"]{Collect current and past data from sources such as Twitter, Facebook, google trends, and Wikipedia. Your data is stored on your own machine.} 
 
-}
+◊p['class:"indented"]{Process and analyze your data to satisfy exploratory and targeted investigations of social media trends and network connectivity.} 
 
 ◊h3{Download}
 

@@ -111,6 +111,19 @@ a:hover {
     color: black;
 }
 
+h1  {
+    font-family: 'Equity-Text-B', serif;
+    font-weight: bold;
+    font-size: 28px; /* was 32pt with concourse */
+    line-height: 34px;
+    width: 600px;
+    margin-bottom: 15px;
+    letter-spacing: 0px;
+    color: #333;
+    text-rendering: optimizeLegibility;
+
+}
+
 h2, h2.entry_title {
     font-family: 'Equity-Text-B', serif;
     font-weight: bold;
@@ -142,4 +155,8 @@ h3 {
     font-size: 30px;
     border: 1px solid #ccc;
     padding: 4px;
+}
+
+page-title {
+    display: none;
 }

@@ -1,5 +1,7 @@
 #lang pollen
 
+◊page-title{MassMine: Your Access To Big Data}
+
 ◊h3{Home} 
 
 ◊p{MassMine is a social media mining and archiving application that simplifies the process of collecting and managing large amounts of data across multiple sources. It is designed with the researcher in mind, providing a flexible framework for tackling individualized research needs. MassMine is designed to run both on personal computers and dedicated servers/clusters. MassMine handles credential authorizations, data acquisition & archiving, as well as customized data export and analysis.}

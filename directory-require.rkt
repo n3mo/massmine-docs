@@ -1,9 +1,16 @@
 #lang racket
 
-(define (ulist . items)
+(require racket/date)
+
+;;; Use for generating a 
+(define (items . items)
   `(ul ,@items))
 
 (define (item . text)
   `(li ,@text))
 
-(provide ulist item)
+(define (link url text) `(a [[href ,url]] ,text))
+
+(define (timestamp) (date->string (current-date)))
+
+(provide items item link timestamp)

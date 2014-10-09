@@ -14,11 +14,11 @@
 
 ◊h3{Download}
 
-◊p{MassMine can be installed and used free of charge. Downloadable files and installation instructions are currently available at the official ◊a['href: "https://github.com/n3mo/massmine"]{github repository}.}
+◊p{MassMine can be installed and used free of charge. Downloadable files and installation instructions are currently available at the official ◊link["https://github.com/n3mo/massmine"]{github repository}.}
 
 ◊h3{Contact}
 
-◊p{Questions, comments, and bug reports should be directed at the MassMine ◊a['href: "https://github.com/n3mo/massmine/issues"]{issue tracker}, and feature requests at the ◊a['href: "https://github.com/n3mo/massmine/pulls"]{pull request page}.}
+◊p{Questions, comments, and bug reports should be directed at the MassMine ◊link["https://github.com/n3mo/massmine/issues"]{issue tracker}, and feature requests at the ◊link["https://github.com/n3mo/massmine/pulls"]{pull request page}.}
 
 
 

@@ -1,22 +1,19 @@
 massmine-docs
 =============
 
-Webpage for [http://www.massmine.org](MassMine.org). The site is made with [http://mbutterick.github.io/pollen/doc/index.html](Pollen).
+Webpage for [MassMine.org](http://www.massmine.org). The site is made with [Pollen](http://mbutterick.github.io/pollen/doc/index.html).
 
-Install Racket Scheme:
-
-    Download the install script from [http://download.racket-lang.org/](Racket-Lang.org)
-	Run the shell script (this may require sudo) to install
+Install [Racket Scheme](http://download.racket-lang.org/)
 
 Install Pollen:
 
 	raco pkg install pollen
 
-Start a local version at [http://localhost:8080](http://localhost:8080):
+Start a local version at [http://localhost:8080/index.ptree](http://localhost:8080/index.ptree):
 
 	raco pollen start
 
-Build the website with
+Or build the website with
 
 	raco pollen render
 

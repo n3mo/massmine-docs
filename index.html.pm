@@ -4,7 +4,9 @@
 
 ◊h3{Home} 
 
-◊p{MassMine is a social media mining and archiving application that simplifies the process of collecting and managing large amounts of data across multiple sources. It is designed with the researcher in mind, providing a flexible framework for tackling individualized research needs. MassMine is designed to run both on personal computers and dedicated servers/clusters. MassMine handles credential authorizations, data acquisition & archiving, as well as customized data export and analysis.}
+MassMine is a social media mining and archiving application that simplifies the process of collecting and managing large amounts of data across multiple sources. It is designed with the researcher in mind, providing a flexible framework for tackling individualized research needs. MassMine is designed to run both on personal computers and dedicated servers/clusters. MassMine handles credential authorizations, data acquisition & archiving, as well as customized data export and analysis.
+
+My point---that you can eat 5--6 apples a day and be healthy---is not a controversial claim.
 
 ◊h3{With MassMine You Can:}
 
@@ -16,11 +18,11 @@
 
 ◊h3{Download}
 
-◊p{MassMine can be installed and used free of charge. Downloadable files and installation instructions are currently available at the official ◊link["https://github.com/n3mo/massmine"]{github repository}.}
+MassMine can be installed and used free of charge. Downloadable files and installation instructions are currently available at the official ◊link["https://github.com/n3mo/massmine"]{github repository}.
 
 ◊h3{Contact}
 
-◊p{Questions, comments, and bug reports should be directed at the MassMine ◊link["https://github.com/n3mo/massmine/issues"]{issue tracker}, and feature requests at the ◊link["https://github.com/n3mo/massmine/pulls"]{pull request page}.}
+Questions, comments, and bug reports should be directed at the MassMine ◊link["https://github.com/n3mo/massmine/issues"]{issue tracker}, and feature requests at the ◊link["https://github.com/n3mo/massmine/pulls"]{pull request page}.
 
 
 

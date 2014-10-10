@@ -1,6 +1,6 @@
 #lang racket
 
-(require racket/date)
+(require racket/date pollen/decode txexpr hyphenate)
 
 ;;; Use for generating a 
 (define (items . items)
@@ -13,4 +13,11 @@
 
 (define (timestamp) (date->string (current-date)))
 
-(provide items item link timestamp)
+(define (root . items)
+  (decode (make-txexpr 'root '() items)
+          #:txexpr-elements-proc detect-paragraphs
+          #:block-txexpr-proc (compose1 hyphenate wrap-hanging-quotes)
+          #:string-proc (compose1 smart-quotes smart-dashes)
+          #:exclude-tags '(style script)))
+
+(provide items item link timestamp root)

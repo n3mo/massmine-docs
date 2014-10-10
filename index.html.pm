@@ -1,6 +1,6 @@
 #lang pollen
 
-◊page-title{MassMine: Your Access To Big Data}
+◊meta['page-title: "MassMine: Your Access To Big Data"]
 
 ◊h3{Home} 
 

@@ -1,6 +1,6 @@
 #lang pollen
 
-◊page-title{MassMine Documentation}
+◊meta['page-title: "MassMine Documentation"]
 
 ◊h2{Documentation}
 

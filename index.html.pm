@@ -6,8 +6,6 @@
 
 MassMine is a social media mining and archiving application that simplifies the process of collecting and managing large amounts of data across multiple sources. It is designed with the researcher in mind, providing a flexible framework for tackling individualized research needs. MassMine is designed to run both on personal computers and dedicated servers/clusters. MassMine handles credential authorizations, data acquisition & archiving, as well as customized data export and analysis.
 
-My point---that you can eat 5--6 apples a day and be healthy---is not a controversial claim.
-
 ◊h3{With MassMine You Can:}
 
 ◊p['class:"indented"]{Automate access to social media and web data through a flexible interface. MassMine runs on personal computers and dedicated servers.} 

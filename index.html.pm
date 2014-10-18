@@ -14,6 +14,18 @@ MassMine is a social media mining and archiving application that simplifies the 
 
 ◊p['class:"indented"]{Process and analyze your data to satisfy exploratory and targeted investigations of social media trends and network connectivity.} 
 
+◊h3{A Tool For Conducting And Teaching About Research}
+
+If you present or publish work that uses MassMine, please cite this website:
+
+◊reference{Van Horn, N. M. & Beveridge, A. (2014). ◊em{MassMine: Your Access To Big Data}. http://www.massmine.org}
+
+MassMine is currently being used for research and as a pedagogical tool at The Ohio State University, the University of Florida, Capital University, and Clemson University. See the ◊link["/about.html"]{About page} for more information. Recent conference presentations involving MassMine include:
+
+◊reference{Beveridge, A. & Van Horn, N. M. (2015) Writing eScience: Using Data Science Tools to Study Networked Writing Ecologies. ◊em{College, Conference on Composition and Communication}. Tampa, FL (March 2015)}
+
+◊reference{Beveridge, A., & Van Horn, N. M. (2014). Humanities Software Development: Data Mining and Writing Studies. ◊em{The humanities and technology camp (THATCamp) conference}.}
+
 ◊h3{Download}
 
 MassMine can be installed and used free of charge. Downloadable files and installation instructions are currently available at the official ◊link["https://github.com/n3mo/massmine"]{github repository}.

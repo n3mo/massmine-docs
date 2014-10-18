@@ -13,6 +13,10 @@
 
 (define (timestamp) (date->string (current-date)))
 
+;;; A convenient wrapper for making hanging indented bibliographic
+;;; references. 
+(define (reference . text) `(p [[class "bibreference"]] ,@text))
+
 (define (root . items)
   (decode (make-txexpr 'root '() items)
           #:txexpr-elements-proc detect-paragraphs
@@ -20,4 +24,4 @@
           #:string-proc (compose1 smart-quotes smart-dashes)
           #:exclude-tags '(style script)))
 
-(provide items item link timestamp root)
+(provide items item link timestamp root reference)

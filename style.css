@@ -42,6 +42,18 @@ ul.nobullet, .entry-content ul.nobullet li, .entry-content ul.nobullet, .nobulle
     border: solid 0px green;
 }
 
+.bibreference {
+    padding-left: 66px ;
+    text-indent: -22px ;
+    font-size: 12pt;
+}
+
+.bio {
+    float: left;
+    padding: 10px;
+    margin-left: 36px;
+}
+
 body{
     background: white;
     color:#000;

@@ -114,6 +114,10 @@ p, ol li {
     margin-top: 18px;
 }
 
+dl {
+    font-family: Charter, Hoefler Text, Cambria, Georgia, Times New Roman, serif;
+}
+
 a {
     color: #667CA3;
     text-decoration: none;

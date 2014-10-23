@@ -1,4 +1,5 @@
 #lang pollen
+◊meta['template: "docs_template.html"]
 
 ◊h2{Documentation}
 

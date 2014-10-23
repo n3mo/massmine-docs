@@ -1,0 +1,172 @@
+/* docstyle.css for documentation at massmine.org  */ 
+
+.sidebar {
+    position: absolute;
+    top: 90px;
+    left: 650px;
+    width: 280px;
+    background: white;
+}
+
+.sidebar ul ul {
+    border: solid 0px #eee;
+    margin: 0px;
+    padding: 0px;
+    padding-left: 25px;
+}
+
+.sidebar li {
+    margin-bottom: 6px;
+    padding-left: 10px;
+}
+
+.sidebar dt {
+    padding-left: 20px;
+    font-size: 11pt;
+}
+
+.sidebar dd {
+    font-size: 9pt;
+}
+
+
+ul.nobullet, .entry-content ul.nobullet li, .entry-content ul.nobullet, .nobullet, ul.nobullet > li {
+    list-style: none;
+    border: 0px solid green;
+}
+
+.indented, .btw, .onespace {
+    margin-left: 36px;
+    border: solid 0px green;
+}
+
+.bibreference {
+    padding-left: 66px ;
+    text-indent: -22px ;
+    font-size: 12pt;
+}
+
+.bio {
+    float: left;
+    padding: 10px;
+    margin-left: 36px;
+}
+
+body{
+    background: white;
+    color:#000;
+    margin:0;
+    padding:0;
+}
+
+.gutter {
+/* background-image: url('/pics/gutter.jpg'); */
+/* background-repeat:repeat-y; */
+
+}
+
+#container {
+    margin: 10px;	
+    margin-top: 40px;
+    margin-left: 20px;
+    width: 615px;
+    min-height: 750px;
+    /* IE6 height hack */
+    height:auto !important;
+    height:770px;
+    
+}
+
+
+#header, #footer {
+    border-top: solid 10px;
+    border-color: #838B8B;
+/* border-radius: 15px; */
+}
+
+#site-footer{
+    margin-top: 40px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-size: 9pt;
+    border-top: solid 3px;
+    border-color: #838B8B;
+
+}
+
+p, li, table#writer_reader > tbody > tr > td  {
+
+    font-family: Charter, Hoefler Text, Cambria, Georgia, Times New Roman, serif;
+    font-size: 19px;
+    line-height: 29px;
+    color: #333;
+
+}
+
+p, ol li {
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+    margin-top: 18px;
+}
+
+dl {
+    font-family: Charter, Hoefler Text, Cambria, Georgia, Times New Roman, serif;
+}
+
+a {
+    color: #667CA3;
+    text-decoration: none;
+}
+
+a:hover {
+    color: black;
+}
+
+h1  {
+    font-family: 'Equity-Text-B', serif;
+    font-weight: bold;
+    font-size: 28px; /* was 32pt with concourse */
+    line-height: 34px;
+    width: 600px;
+    margin-bottom: 15px;
+    letter-spacing: 0px;
+    color: #838B8B;
+    text-rendering: optimizeLegibility;
+
+}
+
+h2, h2.entry_title {
+    font-family: 'Equity-Text-B', serif;
+    font-weight: bold;
+    font-size: 28px; /* was 32pt with concourse */
+    line-height: 34px;
+    width: 600px;
+    margin-bottom: 15px;
+    letter-spacing: 0px;
+    color: #333;
+    text-rendering: optimizeLegibility;
+
+}
+
+h3 {
+    margin: 0;
+    padding: 0;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding-top: 2px;
+    border-top: 1px solid #ccc;
+    color: #333;
+    font-family: source-sans, Helvetica Neue, Calibri, Arial, Times New Roman, serif;
+}
+
+
+.codebox {
+
+    font-family: source-sans, ConcourseMedium, Consolas, Monaco, Courier, Courier New;
+    font-size: 30px;
+    border: 1px solid #ccc;
+    padding: 4px;
+}

@@ -4,7 +4,7 @@
 
 .sidebar {
     position: absolute;
-    top: 100px;
+    top: 120px;
     left: 650px;
     width: 280px;
     background: white;
@@ -70,8 +70,9 @@ body{
 #container {
     margin: 10px;	
     margin-top: 20px;
-    margin-left: 20px;
-    width: 615px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 900px;
     min-height: 750px;
     /* IE6 height hack */
     height:auto !important;
@@ -79,8 +80,66 @@ body{
     
 }
 
+#header-cont {
+    height: 115px;
+    position: fixed;
+    width: 100%;
+    top: 0px;
+}
 
-#header, #footer {
+#navbar-top {
+    background-color: #454545;
+    height: 40px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#navbar-text {
+    width:900px;
+    margin:0px auto;
+    height: 40px;
+    line-height: 40px;
+    color: #FFFFFF;
+    word-spacing: 20px;
+    text-align: right;
+    font-size:15pt;
+    font-family: Charter, Hoefler Text, Cambria, Georgia, Times New Roman, serif;
+}
+
+#navbar-text a:link{
+    color: #FFFFFF;
+}
+
+#navbar-text a:hover{
+    color: #66CCFF;
+}
+
+#navbar-text a:visited{
+    color: #FFFFFF;
+}
+
+#navbar-text a:hover{
+    color: #66CCFF;
+}
+
+#header {
+    background-color: #006699;
+    height: 65px;
+    width:100%;
+    margin:0px auto;
+}
+
+.header-text {
+    width:900px;
+    margin:0px auto;
+    height: 65px;
+    line-height: 65px;
+    color: #FFFFFF;
+    font-size:25pt;
+    font-family: Charter, Hoefler Text, Cambria, Georgia, Times New Roman, serif;
+}
+
+#footer {
     /* border-top: solid 10px; */
     border-bottom: solid 5px;
     border-color: #838B8B;
@@ -181,3 +240,4 @@ h3 {
     padding: 0px;
     float: left;
 }
+

@@ -1,0 +1,22 @@
+#lang pollen
+
+◊meta['page-title: "MassMine: About"]
+
+###Project Team
+<div style="float:right;padding:20px;width:400px;margin-left:auto;margin-right:auto">
+  <img src="/images/trace_logo.jpg" alt="Trace" align="middle">
+  <img src="/images/hiper_logo.jpg" alt="Trace" align="middle">
+  <img src="/images/gasl_logo.jpg" alt="Trace" align="middle">
+</div>
+
+MassMine was created by [Nicholas Van Horn](http://www.nicholasvanhorn.com) and [Aaron Beveridge](http://www.aaronbeveridge.com). MassMine is a TRACE Innovation Initiative, and the project is supported by the George A. Smarthers Libraries and Research Computing at the University of Florida. 
+
+MassMine's entire project team, advisory board, and scholary contributors can be seen here---in our recent [National Endowment for the Humanities](http://ufdc.ufl.edu/AA00025642/00001/pdf) grant application. 
+
+**We would like to give special thanks to the following people for substantial and ongoing support of/contribution to the project:**
+
+* Sidney Dobrin---Director of TRACE at UF
+* Laurie Taylor---Digital Humanities Librarian at UF
+* Matthew Gitzendanner---Research Computing at UF
+* Kenneth Kidd---Chair of English Dept. at UF
+* Sean Morey---Professor of English at Clemson University

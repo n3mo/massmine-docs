@@ -3,10 +3,10 @@
 ◊meta['page-title: "MassMine: About"]
 
 ###Project Team
-<div style="float:right;padding:20px;width:400px;margin-left:auto;margin-right:auto">
-  <img src="/images/trace_logo.jpg" alt="Trace" align="middle">
-  <img src="/images/hiper_logo.jpg" alt="Trace" align="middle">
-  <img src="/images/gasl_logo.jpg" alt="Trace" align="middle">
+<div style="float:right;padding:20px;width:450px;">
+  <img src="images/trace_logo.jpg" alt="Trace" align="middle">
+  <img src="images/hiper_logo.jpg" alt="Hiper Gator Research Computing" align="middle">
+  <img src="images/gasl_logo.jpg" alt="GG Libraries" align="middle">
 </div>
 
 MassMine was created by [Nicholas Van Horn](http://www.nicholasvanhorn.com) and [Aaron Beveridge](http://www.aaronbeveridge.com). MassMine is a TRACE Innovation Initiative, and the project is supported by the George A. Smarthers Libraries and Research Computing at the University of Florida. 

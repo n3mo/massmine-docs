@@ -3,28 +3,36 @@
   <head>
     <meta charset="UTF-8">
     <title>◊(select-from-metas 'page-title metas)</title>
-    <link rel="stylesheet" type="text/css" media="all" href="/docs/docstyle.css" />
+    <link rel="stylesheet" type="text/css" media="all" href="/style.css" />
 
   </head>
-  <div id="header"><!-- this is the top of the page --></div>
 
-  <body class="gutter"><div id="container">
-      <h1>MassMine: Your Access To Big Data</h1>
-      ◊->html[doc]
+  <div id="header-cont"> 
+    <div id="navbar-top">
+      <div id="navbar-text">
+	<a href="/index.html">Home</a> |
+	<a href="/about.html">About</a> |
+	<a href="https://github.com/n3mo/massmine">Download</a> |
+	<a href="/docs/index.html">Documentation</a>
+      </div>
+    </div>
+    <div id="header"><div class="header-text">MASSMINE</div></div>
+  </div>
 
-      <div id="primary" class="sidebar"><ul class="nobullet"><li><a href="/index.html">Home</a></li>
-	  <li><a href="/about.html">About</a></li>
-	  <li><a href="https://github.com/n3mo/massmine">Download</a></li>
-	  <li><a href="/documentation.html">Documentation</a></li>
-	  <br />
-	  <li>Creators
-	    <dl class="nobullet"><dt><a href="http://www.nicholasvanhorn.com">Nicholas Van Horn</a></dt>
-	      <dd>Co-creator and project programmer</dd>
-	      <dt><a href="http://www.aaronbeveridge.com">Aaron Beveridge</a></dt>
-	      <dd>Co-creator and project developer</dd>
-	    </dl>
-      </li></ul></div>
-
+  <body>
+    <div id="container">
+      <div id="documentation">
+	◊->html[doc]
+      </div>
+      <div id="sidebar">
+	<h1>MassMine Docs</h1>
+	<div id="sidebar-content">
+	  <ul class="nobullet">
+	    <li><a href="/docs/index.html">Documentation</a></li>
+	    <li><a href="/docs/install.html">Installation</a></li>
+	  </ul> 
+	</div>
+      </div>
     </div>
 
     <footer id="site-footer">

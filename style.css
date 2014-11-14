@@ -1,33 +1,48 @@
 /* style.css for massmine.org  */ 
-/* Last updated on 2014-10-08 */
 
-
-.sidebar {
-    position: absolute;
-    top: 120px;
-    left: 650px;
-    width: 280px;
-    background: white;
+#sidebar {
+    float:right;
+    width: 160px;
+    background: #E6E6E6;
+    padding: 0px 0px 0px 10px;
+    border-radius: 5px;
+    border-top: solid 2px;
+    border-left: solid 5px;
+    border-right: solid 1px;
+    border-bottom: solid 1px;
+    border-color: #838B8B;
+    box-shadow: 10px 10px 5px #CCCCCC;
 }
 
-.sidebar ul ul {
-    border: solid 0px #eee;
-    margin: 0px;
+#sidebar-content {
+    font-size: 16pt;
+    font-family: Charter, Hoefler Text, Cambria, Georgia, Times New Roman, serif;
+    text-align:left;
+
+}
+
+#sidebar h1 {
+    text-align:left;
+    font-size:12pt;
+}
+
+#sidebar ul ul {
+    margin-left: 0px;
     padding: 0px;
-    padding-left: 25px;
 }
 
-.sidebar li {
-    margin-bottom: 6px;
-    padding-left: 10px;
+#sidebar li {
+    margin-top: -20px;
+    margin-bottom:20px;
+    margin-left:-30px;
 }
 
-.sidebar dt {
-    padding-left: 20px;
+#sidebar dt {
+    padding-left: 0px;
     font-size: 11pt;
 }
 
-.sidebar dd {
+#sidebar dd {
     font-size: 9pt;
 }
 
@@ -61,10 +76,9 @@ body{
     padding:0;
 }
 
-.gutter {
-/* background-image: url('/pics/gutter.jpg'); */
-/* background-repeat:repeat-y; */
-
+#documentation {
+    float:left;
+    width: 720px;
 }
 
 #container {
@@ -77,8 +91,6 @@ body{
     min-height: 750px;
     /* IE6 height hack */
     height:auto !important;
-    height:770px;
-    
 }
 
 #header-cont {
@@ -141,10 +153,8 @@ body{
 }
 
 #footer {
-    /* border-top: solid 10px; */
     border-bottom: solid 5px;
     border-color: #838B8B;
-/* border-radius: 15px; */
 }
 
 #site-footer{
@@ -156,6 +166,7 @@ body{
     font-size: 9pt;
     border-top: solid 3px;
     border-color: #838B8B;
+    clear: both;
 
 }
 
@@ -245,4 +256,46 @@ h3 {
 iframe {
     margin-left:auto;
     margin-right:auto;
+}
+
+code, samp, kbd {
+    font-family: "Courier New", Courier, monospace, sans-serif;
+    text-align: left;
+    color: #555;
+    font-size: 14px;
+    background-color: #E6E6E6;
+    padding: 2px;
+}
+
+pre code {
+    line-height: 1.6em;
+    font-size: 14px;
+    background-color: #FFFFFF;
+}
+
+pre {
+    padding: 0.1em 0.5em 0.3em 0.7em;
+    border-left: 11px solid #ccc;
+    border-right: 2px solid #ccc;
+    border-top: 2px solid #ccc;
+    border-bottom: 2px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 5px 5px 2px #CCCCCC;
+    margin: 1.7em 0 1.7em 0.3em;
+    overflow: auto;
+    width: 93%;
+}
+
+/* target IE7 and IE6 */
+*:first-child+html pre {
+    padding-bottom: 2em;
+    overflow-y: hidden;
+    overflow: visible;
+    overflow-x: auto; 
+}
+
+* html pre { 
+    padding-bottom: 2em;
+    overflow: visible;
+    overflow-x: auto;
 }

@@ -84,7 +84,7 @@ body{
 #container {
     margin: 10px;	
     /* margin-top: 20px; */
-    margin-top: 115px;
+    margin-top: 90px;
     margin-left: auto;
     margin-right: auto;
     width: 900px;
@@ -94,7 +94,7 @@ body{
 }
 
 #header-cont {
-    height: 115px;
+    height: 90px;
     position: fixed;
     width: 100%;
     top: 0px;
@@ -113,10 +113,15 @@ body{
     height: 30px;
     line-height: 30px;
     color: #FFFFFF;
-    word-spacing: 15px;
+    word-spacing: 13px;
     text-align: right;
-    font-size:15pt;
+    font-size:13pt;
     font-family: Charter, Hoefler Text, Cambria, Georgia, Times New Roman, serif;
+}
+
+#navbar-top img {
+    vertical-align:text-top;
+    margin-right:-8px;
 }
 
 #navbar-text a:link{
@@ -137,7 +142,7 @@ body{
 
 #header {
     background-color: #006699;
-    height: 65px;
+    height: 45px;
     width:100%;
     margin:0px auto;
 }
@@ -145,11 +150,23 @@ body{
 .header-text {
     width:900px;
     margin:0px auto;
-    height: 65px;
-    line-height: 65px;
+    height: 45px;
+    line-height: 45px;
     color: #FFFFFF;
     font-size:25pt;
     font-family: Charter, Hoefler Text, Cambria, Georgia, Times New Roman, serif;
+}
+
+.header-title {
+    color:#FFFFFF;
+    font-size:21pt;
+}
+
+.header-subtitle {
+    color: #CCCCCC;
+    font-size:14pt;
+    padding:5px;
+    font-style:italic;
 }
 
 #footer {
@@ -173,7 +190,7 @@ body{
 p, li, table#writer_reader > tbody > tr > td  {
 
     font-family: Charter, Hoefler Text, Cambria, Georgia, Times New Roman, serif;
-    font-size: 19px;
+    font-size: 16px;
     line-height: 29px;
     color: #333;
 

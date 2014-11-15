@@ -2,17 +2,17 @@
 
 ◊meta['page-title: "MassMine: Your Access To Big Data"]
 
-◊h3{MassMine: Your Access To Big Data} 
-
 MassMine is a social media mining and archiving application that simplifies the process of collecting and managing large amounts of data across multiple sources. It is designed with the researcher in mind, providing a flexible framework for tackling individualized research needs. MassMine is designed to run both on personal computers and dedicated servers/clusters. MassMine handles credential authorizations, data acquisition & archiving, as well as customized data export and analysis.
 
+◊div['style:"width:560px;margin-left:auto;margin-right:auto;padding:20px;"]{
 ◊iframe['width:"560" 'height:"315" 'src:"//www.youtube.com/embed/1J2ywTHhGvU" 'frameborder:"0" 'allowfullscreen]
+}
 
 ◊h3{With MassMine You Can:}
 
 ◊p['class:"indented"]{Automate access to social media and web data through a flexible interface. MassMine runs on personal computers and dedicated servers.} 
 
-◊p['class:"indented"]{Collect current and past data from sources such as Twitter, Facebook, google trends, and Wikipedia. Your data is stored on your own machine.} 
+◊p['class:"indented"]{Collect current and past data from sources such as Twitter, Facebook, Google trends, and Wikipedia. Your data is stored on your own machine.} 
 
 ◊p['class:"indented"]{Process and analyze your data to satisfy exploratory and targeted investigations of social media trends and network connectivity.} 
 

@@ -20,8 +20,9 @@
 (define (root . items)
   (decode (make-txexpr 'root '() items)
           #:txexpr-elements-proc detect-paragraphs
-          #:block-txexpr-proc (compose1 hyphenate wrap-hanging-quotes)
+          ;; #:block-txexpr-proc (compose1 hyphenate wrap-hanging-quotes)
+          #:block-txexpr-proc wrap-hanging-quotes
           #:string-proc (compose1 smart-quotes smart-dashes)
-          #:exclude-tags '(style script)))
+          #:exclude-tags '(style script pre code)))
 
 (provide items item link timestamp root reference)

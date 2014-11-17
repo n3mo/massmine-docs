@@ -13,8 +13,10 @@ MassMine is designed to run on Linux, Mac OSX, and Windows.
 To install MassMine, you must complete the following steps, each of which is explained in detail below.
 
 1. Install the *R Statistical Computing Language*.
-2. Install cURL.
-3. Download MassMine (using git or a direct download of the files).
+2. Install cURL development libraries (**Linux only**)
+3. Download MassMine using one of two methods: 
+    1. git (the preferred way to stay up-to-date)
+    2. direct download of files (zip or tarball)
 4. Run MassMine to complete the self-installation.
 
 Note that using some functionality (e.g., Twitter), you will need to complete an additional authentication step.

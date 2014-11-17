@@ -28,9 +28,9 @@ MassMine is currently being used for research and as a pedagogical tool at The O
 
 ◊reference{Beveridge, A., & Van Horn, N. M. (2014). Humanities Software Development: Data Mining and Writing Studies. ◊em{The humanities and technology camp (THATCamp) conference}.}
 
-◊h3{Download}
+◊h3{Installation and Usage}
 
-MassMine can be installed and used free of charge. Downloadable files and installation instructions are currently available at the official ◊link["https://github.com/n3mo/massmine"]{github repository}.
+MassMine can be installed and used free of charge. Downloadable files and installation instructions are ◊link["/docs/index.html"]{available here}.
 
 ◊h3{Contact}
 

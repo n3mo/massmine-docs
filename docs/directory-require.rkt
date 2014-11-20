@@ -13,6 +13,16 @@
 
 (define (timestamp) (date->string (current-date)))
 
+;;; the markdown parser used by pollen doesn't handle tables (as of
+;;; 2014-11-18). For now, I send table formatting to pandoc to get the
+;;; job done
+(define (table . text)
+  (with-output-to-string
+    (let ((mytext (apply string-append text)))
+      (lambda ()
+	(system
+	 (string-append "echo \"" mytext "\" | pandoc -f markdown -t html"))))))
+
 ;;; A convenient wrapper for making hanging indented bibliographic
 ;;; references. 
 (define (reference . text) `(p [[class "bibreference"]] ,@text))
@@ -24,4 +34,4 @@
           #:string-proc (compose1 smart-quotes smart-dashes)
           #:exclude-tags '(style script pre code)))
 
-(provide items item link timestamp root reference)
+(provide items item link timestamp root reference table)

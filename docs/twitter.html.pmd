@@ -1,0 +1,69 @@
+#lang pollen
+
+◊meta['template: "docs_template.html"]
+◊meta['page-title: "MassMine: Twitter Services"]
+
+MassMine offers a collection of *tasks* for retrieving information from Twitter. The following tasks are currently supported, and are chosen by editing the "task" field in your configuration file. Many of these tasks can be customized by setting one of many available options. Options for each task are described below. 
+
+◊table{
+| Twitter Task                              | Description                                                 |
+|-------------------------------------------+-------------------------------------------------------------|
+| [test](/docs/twitter.html#test)           | An automated test suite for MassMine                        |
+| [search](/docs/twitter.html#search)       | Search Twitter's Rest API by keyword                        |
+| [locations](/docs/twitter.html#locations) | Returns a list of valid Where On Earth Identifiers (woeids) |
+| [timeline](/docs/twitter.html#timeline)   | Retrieve up to 3200 tweets from specific users              |
+| [trends](/docs/twitter.html#trends)       | Monitor top-10 trends for one or more locations             |
+| [stream](/docs/twitter.html#stream)       | Capture live tweets as they happen                          |
+}
+
+# Test
+
+A suite of tests to ensure that MassMine is communicating successfully with Twitter. When accessing Twitter for the first time with MassMine, conducting a test with this task will ensure that everything is operating properly.
+
+◊table{
+| Option      | Description                           | Example |
+|-------------+---------------------------------------+---------|
+| **verbose** | Print lots of diagnostic information? | FALSE   |
+}
+
+* **verbose**: This is the only option available. By default it is set to FALSE. If you need to diagnose a problem when a test fails, rerun the test again and set the option to TRUE.
+
+# Search
+
+Search past records (tweets) on Twitter. The search task allows the user to target Twitter's Rest API to fetch past tweets matching a given search query. Results are saved to disk. Configuration options include:
+
+◊table{
+| Option        | Description                                       | Example                |
+|---------------+---------------------------------------------------+------------------------|
+| **file.name** | File destination for tweet data                   | tweet_data.csv         |
+| **query**     | Search query                                      | florida gators         |
+| **tweets**    | Number of Twitter records to return (default=25)  | 500                    |
+| **lang**      | Language to restrict results to                   | en                     |
+| **since**     | Restrict records to those occurring after a date  | 2014-04-22             |
+| **until**     | Restrict records to those occurring before a date | 2014-10-03             |
+| **geocode**   | Restricts tweets to a given geospatial radius     | 41.8369, 87.6847, 20mi |
+}
+
+* **file.name**: (*Required*) Can be any relative (./tweet_data.csv) or absolute (/home/user/tweetdata.csv) file path. Your results will be saved to this file.
+* **query**: (*Required*) This is the search term with which you wish to query Twitter. You can include multiple keywords and/or hashtags.
+* **tweets**: The number of tweets you would like to receive. Note that malformed tweets will be removed, so you may receive less tweet records than you request. If you do not include this option, a default 25 tweets will be requested.
+* **lang**: Specify an [ISO 639-1 code](http://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) to restrict your search to a specific language.
+* **since**: If supplied, only tweets created after the date (formatted as YYYY-MM-DD) will be returned.
+* **until**: If supplied, only tweets created before the date (formatted as YYYY-MM-DD) will be returned.
+* **geocode**: Restrict tweets to a given location. The format is *latitude, longitude, radius*, where *radius* can be mi (miles) or km (kilometers). The example given above is a 20 mile radius centered on Chicago.
+
+# Locations
+
+Returns the full list of available [Where On Earth Identifiers](https://developer.yahoo.com/geo/geoplanet/guide/concepts.html).
+
+# Timeline
+
+Fetch the timeline (tweets) for a specified user or list of users
+
+# Trends
+
+Grab the top 10 trends, as defined by Twitter, for one or more locations.
+
+# Stream
+
+Capture live tweets that match a pattern as they happen.

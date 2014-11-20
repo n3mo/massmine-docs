@@ -5,6 +5,17 @@
 
 *WARNING: This project is currently in pre-release form. Day to day changes are likely to break existing functionality. Upcoming version 1.0.0 will mark the first stable release*
 
+## Upgrading
+
+Already have MassMine installed and want to update to the latest release? Updating is easy with git:
+
+```sh
+cd ~/path/to/massmine/
+git pull
+```
+
+If you installed by directly downloading the source files (a zip or tarball file), simply download the latest [zip file](https://github.com/n3mo/massmine/zipball/master) or [tarball](https://github.com/n3mo/massmine/tarball/master) and replace the previous `massmine` directory (be careful not to lose any additional files you may have added to the previous `massmine` directory).
+
 ## Installation
 
 MassMine is designed to run on Linux, Mac OSX, and Windows.

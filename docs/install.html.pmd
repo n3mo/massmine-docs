@@ -3,8 +3,6 @@
 ◊meta['template: "docs_template.html"]
 ◊meta['page-title: "MassMine Installation"]
 
-*WARNING: This project is currently in pre-release form. Day to day changes are likely to break existing functionality. Upcoming version 1.0.0 will mark the first stable release*
-
 ## Upgrading
 
 Already have MassMine installed and want to update to the latest release? Updating is easy with git:

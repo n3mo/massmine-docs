@@ -3,8 +3,6 @@
 ◊meta['template: "docs_template.html"]
 ◊meta['page-title: "MassMine Documentation"]
 
-*WARNING: This project is currently in pre-release form. Day to day changes are likely to break existing functionality. Upcoming version 1.0.0 will mark the first stable release*
-
 <div style="padding:20px;margin-left:auto;margin-right:auto;width:319px"><img src="https://github.com/n3mo/massmine/raw/master/img/splash.png" heigth="463"; width="319";></div>
 
 MassMine is a research tool designed to simplify the collection and use of data from social media outlets.

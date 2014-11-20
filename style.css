@@ -317,3 +317,93 @@ pre {
     overflow: visible;
     overflow-x: auto;
 }
+
+/* BEGINNING OF TABLE STYLING */
+
+table		{
+    margin: 0;
+    padding: 0;
+    font: normal 0.9em tahoma, arial, sans-serif;
+    line-height: 1.4em;
+    border-collapse: collapse;
+    border: 4px solid #ADBBCA;
+    color: #4F6480;
+    background: #F0F0F0;
+    margin-left:auto;
+    margin-right:auto;
+    width:98%;
+}
+
+table caption	{
+    margin: 0;
+    height: 32px;
+    padding: 0;
+    color: #4F6480;
+    line-height: 2em;
+    text-align: left;
+    font: bold 150% georgia, serif;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+}
+
+thead		{
+    color: #fff;
+    background: #5E7796;
+}
+
+thead tr th	{
+    padding: 4px 8px 4px 8px;
+}
+
+
+thead th	{
+    border: 4px solid #ADBBCA;
+}
+
+tfoot		{
+    background: #fff;
+}
+
+tfoot tr td, tfoot tr th, tbody tr td	{
+    padding: 4px;
+}
+
+tbody tr	{
+    border: 4px solid #ADBBCA;
+}
+
+tbody th	{
+    padding: 8px;
+    border: 4px solid #ADBBCA;
+}
+
+tbody td	{
+    background: #E9ECEE;
+}
+
+tbody tr.odd		{
+    background: #C4CFDB;
+}
+
+tbody tr.odd td		{
+    background: #F0F0F0;
+    color: #4F6480;
+}
+
+/* END OF TABLE STYLING */
+
+.warning {
+    font-family: Charter, Hoefler Text, Cambria, Georgia, Times New Roman, serif;
+    font-size: 16px;
+    line-height: 29px;
+    color: #333;
+    padding: 5px;
+    background: #FFCCCC;
+    border-radius: 5px;
+    border-top: solid 3px;
+    border-left: solid 3px;
+    border-right: solid 3px;
+    border-bottom: solid 3px;
+    border-color: #FF8080;
+
+}

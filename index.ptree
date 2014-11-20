@@ -5,4 +5,5 @@ documentation.html
 about.html
 ◊docs/index.html{
 	docs/install.html
+	docs/twitter.html
 }

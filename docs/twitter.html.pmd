@@ -3,6 +3,32 @@
 ◊meta['template: "docs_template.html"]
 ◊meta['page-title: "MassMine: Twitter Services"]
 
+# Authenticating With Twitter
+
+If you are using the Twitter functionality of MassMine, you must authenticate with the Twitter servers. This is a requirement of Twitter. To do so, you must log in to (or create) an account at [Twitter's Developer Site](https://dev.twitter.com). Once logged in, you must create a new "application" at [Twitter's Application Site](https://apps.twitter.com/). In your configuration file, edit the entries for "key" and "secret" to include the corresponding codes provided to you by Twitter. You should also provide a name for your Twitter account in your configuration file. 
+
+When you attempt to use MassMine to access Twitter for the first time, you will be asked to authenticate your account. In a terminal, you must enter the following commands:
+
+```sh
+cd ~/path/to/massmine
+R
+```
+
+This will start an R process. At the R prompt, enter:
+
+```R
+source("massmine")
+```
+
+When you enter the `source("massmine")` command, you will be prompted with an authentication process. Follow the provided web link and enter the numeric code provided to you. Upon success, MassMine will be ready for use with Twitter. You can now quit R with `q()` (choosing "no" when asked about saving your session).
+
+MassMine is now ready to work with Twitter. You can now start MassMine directly at any time, and you will never have to authenticate with Twitter again:
+
+```sh
+~/path/to/massmine
+```
+# Accessing Twitter Records
+
 MassMine offers a collection of *tasks* for retrieving information from Twitter. The following tasks are currently supported, and are chosen by editing the "task" field in your configuration file. Many of these tasks can be customized by setting one of many available options. Options for each task are described below. 
 
 ◊table{
@@ -16,7 +42,7 @@ MassMine offers a collection of *tasks* for retrieving information from Twitter.
 | [stream](/docs/twitter.html#stream)       | Capture live tweets as they happen                          |
 }
 
-# Test
+## Test
 
 A suite of tests to ensure that MassMine is communicating successfully with Twitter. When accessing Twitter for the first time with MassMine, conducting a test with this task will ensure that everything is operating properly.
 
@@ -28,7 +54,7 @@ A suite of tests to ensure that MassMine is communicating successfully with Twit
 
 * **verbose**: This is the only option available. By default it is set to FALSE. If you need to diagnose a problem when a test fails, rerun the test again and set the option to TRUE.
 
-# Search
+## Search
 
 Search past records (tweets) on Twitter. The search task allows the user to target Twitter's Rest API to fetch past tweets matching a given search query. Results are saved to disk. Configuration options include:
 
@@ -52,18 +78,18 @@ Search past records (tweets) on Twitter. The search task allows the user to targ
 * **until**: If supplied, only tweets created before the date (formatted as YYYY-MM-DD) will be returned.
 * **geocode**: Restrict tweets to a given location. The format is *latitude, longitude, radius*, where *radius* can be mi (miles) or km (kilometers). The example given above is a 20 mile radius centered on Chicago.
 
-# Locations
+## Locations
 
 Returns the full list of available [Where On Earth Identifiers](https://developer.yahoo.com/geo/geoplanet/guide/concepts.html).
 
-# Timeline
+## Timeline
 
 Fetch the timeline (tweets) for a specified user or list of users
 
-# Trends
+## Trends
 
 Grab the top 10 trends, as defined by Twitter, for one or more locations.
 
-# Stream
+## Stream
 
 Capture live tweets that match a pattern as they happen.

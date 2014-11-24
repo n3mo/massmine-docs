@@ -3,7 +3,7 @@
 ◊meta['template: "docs_template.html"]
 ◊meta['page-title: "MassMine Installation"]
 
-## Upgrading
+# Upgrading
 
 Already have MassMine installed and want to update to the latest release? Updating is easy with git:
 
@@ -14,11 +14,11 @@ git pull
 
 If you installed by directly downloading the source files (a zip or tarball file), simply download the latest [zip file](https://github.com/n3mo/massmine/zipball/master) or [tarball](https://github.com/n3mo/massmine/tarball/master) and replace the previous `massmine` directory (be careful not to lose any additional files you may have added to the previous `massmine` directory).
 
-## Installation
+# Installation
 
 MassMine is designed to run on Linux, Mac OSX, and Windows.
 
-### High Level Summary
+## High Level Summary
 To install MassMine, you must complete the following steps, each of which is explained in detail below.
 
 1. Install the *R Statistical Computing Language*.
@@ -30,14 +30,14 @@ To install MassMine, you must complete the following steps, each of which is exp
 
 Note that using some functionality (e.g., Twitter), you will need to complete an additional authentication step.
 
-### Dependencies
+## Dependencies
 
 MassMine requires the following dependencies. Each of these must be installed prior to running MassMine:
 
 1. **R**. The R statistical computing language is freely available for all major operating systems. It is typically quite easy to install. Instructions for doing so can be found on the [The R Project for Statistical Computing](http://www.r-project.org/). MassMine is developed to run on R version 3.0.x. It is likely to also run on newer versions of R, but you may (or may not) run into trouble with older 2.x versions of R.
 2. **cURL**. This is a command line utility for fetching web content. If you are using Linux or Mac OS X it is likely already installed on your system. You can check by entering `curl --version` in a terminal. If the command returns a version number, you can skip to the next installation step.
 
-#### Linux and cURL
+### Linux and cURL
 
 If you are using Linux, you may also need to install the cURL development library. If you're using Ubuntu (or similar), you can check for this as follows:
 
@@ -53,11 +53,11 @@ If you see *libcurl.so* somewhere in the output of that command, you should be r
 sudo apt-get install libcurl4-openssl-dev
 ```
 
-#### Windows and cURL
+### Windows and cURL
 
 If you're using Windows, you'll likely have to install cURL. If so, install it using [these instructions](http://callejoabel.blogspot.com/2013/09/making-curl-work-on-windows-7.html).
 
-### Install Using Git
+## Install MassMine Using Git
 
 If you don't already have git installed, you can do so easily. On Ubuntu, you can install git through the Software Center, or via a terminal:
 
@@ -78,11 +78,11 @@ git clone https://github.com/n3mo/massmine.git
 
 This will create a directory "massmine" in the folder ~/change/to/path/of/your/choice with the necessary files inside.
 
-### Install From Source (Alternative Method To Git)
+## Install From Source (Alternative Method To Git)
 
 As an alternative to git, you can simply download a [zip file](https://github.com/n3mo/massmine/zipball/master) or [tarball](https://github.com/n3mo/massmine/tarball/master) of the source code. Extract the compressed file to create a directory "massmine."
 
-### Completing The Installation
+## Completing The Installation
 
 Once you have installed the source code (using either method from above), you can setup MassMine by running it.
 
@@ -96,7 +96,7 @@ chmod +x massmine
 
 On its first run, MassMine will offer to install any required R packages. You must either allow MassMine to install these when prompted, or alternatively you can install them yourself from within R (experienced users only). Once complete, MassMine is installed and is ready to be used. Restart MassMine with `./massmine` to begin using it.
 
-### Configuration File
+# Configuration File
 
 You control MassMine's behavior with user configuration files. These files are [YAML](http://en.wikipedia.org/wiki/YAML) formatted (that is, they are structured for a computer to read, but are also human-readable). Example configuration files are included with MassMine in the "examples" folder of your installation.
 
@@ -113,27 +113,3 @@ If you do not specify a configuration file in this manner, MassMine will search 
 
 If no file can be found in these locations, MassMine stops with an error.
 
-### Authenticating With Twitter
-
-If you are using the Twitter functionality of MassMine, you must authenticate with the Twitter servers. This is a requirement of Twitter. To do so, you must log in to (or create) an account at [Twitter's Developer Site](https://dev.twitter.com). Once logged in, you must create a new "application" at [Twitter's Application Site](https://apps.twitter.com/). In your configuration file, edit the entries for "key" and "secret" to include the corresponding codes provided to you by Twitter. You should also provide a name for your Twitter account in your configuration file. 
-
-When you attempt to use MassMine to access Twitter for the first time, you will be asked to authenticate your account. In a terminal, you must enter the following commands:
-
-```sh
-cd ~/path/to/massmine
-R
-```
-
-This will start an R process. At the R prompt, enter:
-
-```R
-source("massmine")
-```
-
-When you enter the `source("massmine")` command, you will be prompted with an authentication process. Follow the provided web link and enter the numeric code provided to you. Upon success, MassMine will be ready for use with Twitter. You can now quit R with `q()` (choosing "no" when asked about saving your session).
-
-MassMine is now ready to work with Twitter. You can now start MassMine directly at any time, and you will never have to authenticate with Twitter again:
-
-```sh
-~/path/to/massmine
-```

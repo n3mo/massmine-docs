@@ -96,20 +96,3 @@ chmod +x massmine
 
 On its first run, MassMine will offer to install any required R packages. You must either allow MassMine to install these when prompted, or alternatively you can install them yourself from within R (experienced users only). Once complete, MassMine is installed and is ready to be used. Restart MassMine with `./massmine` to begin using it.
 
-# Configuration File
-
-You control MassMine's behavior with user configuration files. These files are [YAML](http://en.wikipedia.org/wiki/YAML) formatted (that is, they are structured for a computer to read, but are also human-readable). Example configuration files are included with MassMine in the "examples" folder of your installation.
-
-When started, you can specify a custom configuration file by including the file name after the call to MassMine. Assuming you have a file called "my-massmine-config" in the same directory you are working in, you can start MassMine as follows:
-
-```sh
-./massmine my-massmine-config
-```
-
-If you do not specify a configuration file in this manner, MassMine will search for a configuration file called "mmconfig" in the following locations, in this order:
-
-1. In the current directory that you're calling MassMine in.
-2. In the "examples" folder of the MassMine installation, wherever it was installed on your computer.
-
-If no file can be found in these locations, MassMine stops with an error.
-

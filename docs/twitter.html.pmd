@@ -70,7 +70,7 @@ Search past records (tweets) on Twitter. The search task allows the user to targ
 | **geocode**   | Restricts tweets to a given geospatial radius     | 41.8369, 87.6847, 20mi |
 }
 
-* **file.name**: (*Required*) Can be any relative (./tweet_data.csv) or absolute (/home/user/tweetdata.csv) file path. Your results will be saved to this file.
+* **file.name**: (*Required*) Can be any relative (./tweet_data.csv) or absolute (/home/user/tweet_data.csv) file path. Your results will be saved to this file.
 * **query**: (*Required*) This is the search term with which you wish to query Twitter. You can include multiple keywords and/or hashtags.
 * **tweets**: The number of tweets you would like to receive. Note that malformed tweets will be removed, so you may receive less tweet records than you request. If you do not include this option, a default 25 tweets will be requested.
 * **lang**: Specify an [ISO 639-1 code](http://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) to restrict your search to a specific language.
@@ -113,6 +113,40 @@ Fetch the timeline (tweets) for a specified user or list of users. This allows f
 
 Grab the top 10 trends, as defined by Twitter, for one or more locations (woeids). 
 
+◊table{
+| Option        | Description                            | Example                 |
+|---------------+----------------------------------------+-------------------------|
+| **file.name** | File destination for trend data        | trend_data.csv          |
+| **woeid**     | Where on earth identifier (up to five) | 2347563 2347596 2347561 |
+| **samples**   | Number of times to request trends      | 5                       |
+| **hashtags**  | Include hashtags? (TRUE or FALSE)      | TRUE                    |
+}
+
+* **file.name**: (*Required*) Can be any relative (./trend_data.csv) or absolute (/home/user/trend_data.csv) file path. Your results will be saved to this file.
+* **woeid**: (*Required*) [Where On Earth Identifiers](https://developer.yahoo.com/geo/geoplanet/guide/concepts.html). MassMine will return the top-10 trends for each woeid location supplied on every sample. You must supply at least one location. A maximum of 5 woeids can be requested (due to limitations in Twitter's access rate limits). To determine available woeids, use the *Locations* task.
+* **samples**: MassMine will fetch the current top-10 trends for each woeid every five minutes (this is the frequency at which Twitter updates these lists). A new "sample" will be fetched every 5 minutes for *samples* number of times. MassMine supports long running monitoring of trends (i.e., large sample sizes). In the event of network problems preventing access to Twitter, existing data will not be lost, and MassMine will continue to try to connect every 5 minutes for *samples* number of tries.
+* **hashtags**: Twitter calculates top-10 trends both with and without including hashtags. By default (TRUE), hashtags are included. Set this to FALSE to have them excluded. 
+
 ## Stream
 
 Capture live tweets that match a pattern as they happen.
+
+◊table{
+| Option        | Description                                 | Example                      |
+|---------------+---------------------------------------------+------------------------------|
+| **file.name** | File destination for streaming data         | streaming_data.csv           |
+| **track**     | keyword(s) to track                         | osu buckeyes, florida gators |
+| **follow**    | A comma-separated list of user IDs to track | 1234567                      |
+| **locations** | Longitude-latitude bounding box             | -74,40,-73,41                |
+| **lang**      | Language to restrict results to             | en                           |
+| **timeout**   | Maximum time to collect tweets              | 0                            |
+| **tweets**    | Maximum number of tweets to collect         | 10                           |
+}
+
+* **file.name**: (*Required*) Can be any relative (./streaming_data.csv) or absolute (/home/user/streaming_data.csv) file path. Your results will be saved to this file.
+* **track**: (*Required*) Tweets containing these keywords will be collected from Twitter. Use spaces for logical AND (e.g., "cats dogs" is equivalent to "cats and dogs"), and use commas for logical OR (e.g., "cats, dogs" is equivalent to "cats or dogs").
+* **follow**: If you would like to restrict your collection to a specified user or users, you can include their Twitter ID numbers here. Only tweets from these users will be collected (as they match your *track* keywords).
+* **locations**: You can specify a bounding box (or boxes) by drawing a rectangle using longitude and latitude coordinates to identify the southwest and northeast corners of the boundary. See [Twitter's documentation](https://dev.twitter.com/streaming/overview/request-parameters#locations) for examples.
+* **lang**: Specify a [BCP 47 code](https://en.wikipedia.org/wiki/IETF_language_tag) to restrict your search to a specific language.
+* **timeout**: If set to 0, MassMine will continue to collect tweets indefinitely (or until *tweets* number of tweets have been collected). Set to any number of SECONDS to cause MassMine to stop after a given amount of time.
+* **tweets**: The maximum number of tweets to collect. MassMine will stop after reaching this number, or when reaching *timeout* number of seconds. You can specify timeout and/or tweets in any combination to achieve your desired collection goal.

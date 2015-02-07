@@ -141,6 +141,7 @@ Capture live tweets that match a pattern as they happen.
 | **lang**      | Language to restrict results to             | en                           |
 | **timeout**   | Maximum time to collect tweets              | 0                            |
 | **tweets**    | Maximum number of tweets to collect         | 10                           |
+| **shrink**    | Save only the most critical data            | FALSE                        |
 }
 
 * **file.name**: (*Required*) Can be any relative (./streaming_data.csv) or absolute (/home/user/streaming_data.csv) file path. Your results will be saved to this file.
@@ -150,3 +151,4 @@ Capture live tweets that match a pattern as they happen.
 * **lang**: Specify a [BCP 47 code](https://en.wikipedia.org/wiki/IETF_language_tag) to restrict your search to a specific language.
 * **timeout**: If set to 0, MassMine will continue to collect tweets indefinitely (or until *tweets* number of tweets have been collected). Set to any number of SECONDS to cause MassMine to stop after a given amount of time.
 * **tweets**: The maximum number of tweets to collect. MassMine will stop after reaching this number, or when reaching *timeout* number of seconds. You can specify timeout and/or tweets in any combination to achieve your desired collection goal.
+* **shrink**: By default, Twitter's streaming API returns a lot of information. Often, you will only need a useful subset of this data. By setting this option to TRUE, the extra data columns will be removed from the resulting data file (this will also reduce the final file size by up to 50%). 

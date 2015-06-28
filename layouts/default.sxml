@@ -1,0 +1,53 @@
+()
+`((xhtml-1.0-strict)
+  (html (@ (xmlns "http://www.w3.org/1999/xhtml"))
+	(head
+	 (meta (@ (content "text/html; charset=UTF-8") (http-equiv "content-type"))) 
+	 (meta (@ (content "MassMine: Your Access To Big Data") (name "Social Media Data Mining"))) 
+	 (meta (@ (name "massmine"))) 
+	 (meta (@ (content "Nicholas Van Horn") (name "author"))) 
+	 (link (@ (href "/style.css") (rel "stylesheet") (type "text/css")))
+	 (title ,($ 'title)))
+	(div (@ (id "header-cont")) 
+	     (div (@ (id "navbar-top"))
+		  (div (@ (id "navbar-text"))
+		       (a (@ (href "/docs/index.html"))
+			  (img (@
+				(class "nav-img")
+				(src "/images/open-book-grey.png")
+				(height 22px) (width 22px)
+				(alt "MassMine Docs")))
+			  " Documentation")
+		       " | "
+		       (a (@ (href "/about.html"))
+			  (img (@
+				(class "nav-img")
+				(src "/images/question_mark.png")
+				(height 22px) (width 22px)
+				(alt "About")))
+			  " About")
+		       " | "
+		       (a (@ (href "https://github.com/n3mo/massmine"))
+			  (img (@
+				(class "nav-img")
+				(src "/images/GitHub-Mark-Light-32px.png")
+				(height 22px) (width 22px)
+				(alt "View me on GitHub")))
+			  " GitHub")))
+	     (div (@ (id "header"))
+		  (div (@ (class "header-text"))
+		       (a (@ (href "/"))
+			  (span (@ (class "header-title")) "MassMine:")
+			  (span (@ (class "header-subtitle"))
+				"Your Access To Big Data:")))))
+	(div (@ (class "gutter"))
+	      (div (@ (id "container"))
+		   (inject ,contents))
+	      (footer (@ (id "site-footer"))
+		      (br)
+		      "© 2014-2015"
+		      (br)
+		      "Content and images are copyrighted by Nicholas Van Horn & Aaron Beveridge"
+		      (br)
+		      "Last updated on "
+		      ,(time->string (seconds->local-time (current-seconds)) "%a, %b %e, %Y")))))

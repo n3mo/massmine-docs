@@ -1,4 +1,4 @@
-((title . "MassMine Configuration")
+((title . "Using MassMine")
  (layouts "docs.sxml"))
 
 # Using and Configuring MassMine 

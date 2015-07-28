@@ -1,22 +1,18 @@
 massmine-docs
 =============
 
-Webpage for [MassMine.org](http://www.massmine.org). The site is made with [Pollen](http://mbutterick.github.io/pollen/doc/index.html).
+Webpage for [MassMine.org](http://www.massmine.org). The site is made with [Hyde](http://wiki.call-cc.org/eggref/4/hyde).
 
-Install [Racket Scheme](http://download.racket-lang.org/)
+Install [Chicken Scheme](http://code.call-cc.org/)
 
-Install Pollen:
+Install Hyde:
 
-	raco pkg install pollen
+	chicken-install hyde
 
-Start a local version at [http://localhost:8080/index.ptree](http://localhost:8080/index.ptree):
+Start a local version using spiffy at [http://localhost:8080/](http://localhost:8080/):
 
-	raco pollen start
+	hyde serve
 
-Or build the website with
+Or build the website for deployment with
 
-	raco pollen render
-
-Create a deployable version with Pollen markup files removed (saved to your local disk at ~/clone)
-
-	raco pollen clone
+	hyde

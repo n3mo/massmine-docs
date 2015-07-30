@@ -9,9 +9,18 @@ MassMine should run on most versions of Linux, FreeBSD, OpenBSD, and Mac OS X. S
 
 ## Step 1: Download
 
-Download a copy of the latest version for your computer's architecture from the @@@LINK official binaries repository (e.g., massmine-x.x.x-linux-x86_64.tar.gz for 64 bit Linux systems). 
+Download a copy of the latest version for your computer's architecture
 
-<div class="hint">Custom packages have been built for University of Florida Research Computing users, marked "massmine-x.x.x-hipergator"</div>
+<div><a href="http://www.massmine.org/downloads/massmine-0.9.3-linux-x86_64.zip"><img alt="Download MassMine" src="/images/download_icon.png" height="50" width="50" style="vertical-align:middle">   MassMine for 64 bit Linux (zip)</a> | <b>MD5 checksum:</b> 8c80b291aae9fa75e20f105e4db11ab4</div>
+
+
+<div><a href="http://www.massmine.org/downloads/massmine-0.9.3-linux-x86_64.tar.gz"><img alt="Download MassMine" src="/images/download_icon.png" height="50" width="50" style="vertical-align:middle">   MassMine for 64 bit Linux (tar.gz)</a> | <b>MD5 checksum:</b> 632eb89468dcfbd96d0b535bf703d07b</div>
+<div class="hint">A custom package has been built for University of Florida Research Computing users. This bundle contains both MassMine and a data cleaning tool called <a href="https://github.com/n3mo/jsan">jsan (The JSON Swiss Army kNife)</a>
+
+<br><br>
+<div><a href="http://www.massmine.org/downloads/massmine-toolkit-hipergator.zip"><img alt="Download MassMine" src="/images/download_icon.png" height="50" width="50" style="vertical-align:middle">   MassMine Toolkit (zip format)</a> | <b>MD5 checksum:</b> 61d7fa742b3683d5d938bc2f0bc95930</div>
+<div><a href="http://www.massmine.org/downloads/massmine-toolkit-hipergator.tar.gz"><img alt="Download MassMine" src="/images/download_icon.png" height="50" width="50" style="vertical-align:middle">   MassMine Toolkit (tar.gz format)</a> | <b>MD5 checksum:</b> 0eee4da0af0569c221313d7d4b403eee</div>
+</div>
 
 ## Step 2: Install
 

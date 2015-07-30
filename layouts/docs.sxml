@@ -11,6 +11,14 @@
 	(div (@ (id "header-cont")) 
 	     (div (@ (id "navbar-top"))
 		  (div (@ (id "navbar-text"))
+		       (a (@ (href "/docs/install.html"))
+			  (img (@
+				(class "nav-img")
+				(src "/images/download_icon_gs.png")
+				(height 22px) (width 22px)
+				(alt "Download")))
+			  " Download")
+		       " | "
 		       (a (@ (href "/docs/index.html"))
 			  (img (@
 				(class "nav-img")

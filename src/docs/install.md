@@ -11,15 +11,15 @@ MassMine should run on most versions of Linux, FreeBSD, OpenBSD, and Mac OS X. S
 
 Download a copy of the latest version for your computer's architecture
 
-<div><a href="http://www.massmine.org/downloads/massmine-0.9.3-linux-x86_64.zip"><img alt="Download MassMine" src="/images/download_icon.png" height="50" width="50" style="vertical-align:middle">   MassMine for 64 bit Linux (zip)</a> | <b>MD5 checksum:</b> 8c80b291aae9fa75e20f105e4db11ab4</div>
+<div><a href="http://www.massmine.org/downloads/massmine-0.9.5-linux-x86_64.zip"><img alt="Download MassMine" src="/images/download_icon.png" height="50" width="50" style="vertical-align:middle">   MassMine for 64 bit Linux (zip)</a> | <b>MD5 checksum:</b> 319706ddd39941e8a3d40698fdc00ab5</div>
 
 
-<div><a href="http://www.massmine.org/downloads/massmine-0.9.3-linux-x86_64.tar.gz"><img alt="Download MassMine" src="/images/download_icon.png" height="50" width="50" style="vertical-align:middle">   MassMine for 64 bit Linux (tar.gz)</a> | <b>MD5 checksum:</b> 632eb89468dcfbd96d0b535bf703d07b</div>
+<div><a href="http://www.massmine.org/downloads/massmine-0.9.5-linux-x86_64.tar.gz"><img alt="Download MassMine" src="/images/download_icon.png" height="50" width="50" style="vertical-align:middle">   MassMine for 64 bit Linux (tar.gz)</a> | <b>MD5 checksum:</b> 6553c284663f39ec6810581416a40cdb</div>
 <div class="hint">A custom package has been built for University of Florida Research Computing users. This bundle contains both MassMine and a data cleaning tool called <a href="https://github.com/n3mo/jsan">jsan (The JSON Swiss Army kNife)</a>
 
 <br><br>
-<div><a href="http://www.massmine.org/downloads/massmine-toolkit-hipergator.zip"><img alt="Download MassMine" src="/images/download_icon.png" height="50" width="50" style="vertical-align:middle">   MassMine Toolkit (zip format)</a> | <b>MD5 checksum:</b> 61d7fa742b3683d5d938bc2f0bc95930</div>
-<div><a href="http://www.massmine.org/downloads/massmine-toolkit-hipergator.tar.gz"><img alt="Download MassMine" src="/images/download_icon.png" height="50" width="50" style="vertical-align:middle">   MassMine Toolkit (tar.gz format)</a> | <b>MD5 checksum:</b> 0eee4da0af0569c221313d7d4b403eee</div>
+<div><a href="http://www.massmine.org/downloads/massmine-toolkit-hipergator.zip"><img alt="Download MassMine" src="/images/download_icon.png" height="50" width="50" style="vertical-align:middle">   MassMine Toolkit (zip format)</a> | <b>MD5 checksum:</b> 312d5bfc4b3c26a43fd746c64e979a3f</div>
+<div><a href="http://www.massmine.org/downloads/massmine-toolkit-hipergator.tar.gz"><img alt="Download MassMine" src="/images/download_icon.png" height="50" width="50" style="vertical-align:middle">   MassMine Toolkit (tar.gz format)</a> | <b>MD5 checksum:</b> befec15c8060207ab83288d36142b462</div>
 </div>
 
 ## Step 2: Install

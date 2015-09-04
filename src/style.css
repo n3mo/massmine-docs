@@ -325,7 +325,7 @@ iframe {
 }
 
 code, samp, kbd {
-    font-family: "Courier New", Courier, monospace, sans-serif;
+    /* font-family: "Courier New", Courier, monospace, sans-serif; */
     text-align: left;
     color: #555;
     font-size: 14px;
@@ -334,6 +334,7 @@ code, samp, kbd {
 }
 
 pre code {
+    font-family: Pragmata, Menlo, 'DejaVu LGC Sans Mono', 'DejaVu Sans Mono', Consolas, 'Everson Mono', 'Lucida Console', 'Andale Mono', 'Nimbus Mono L', 'Liberation Mono', FreeMono, 'Osaka Monospaced', Courier, 'New Courier', monospace;
     line-height: 1.6em;
     font-size: 14px;
     background-color: #FFFFFF;
@@ -467,4 +468,11 @@ tbody tr.odd td		{
     border: 1px solid #dddd66;
     margin-top: 15px;
     margin-bottom: 15px;
+}
+
+.raw {
+    padding: 5px;
+    background: #E0E0E0;
+    font-family: source-sans, ConcourseMedium, Consolas, Monaco, Courier, Courier New;
+    width: 75%;
 }

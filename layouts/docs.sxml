@@ -58,6 +58,8 @@
 			   (li (@ (class "topless"))
 			       (a (@ (href "/docs/install.html")) "Installation"))
 			   (li (@ (class "topless"))
+			       (a (@ (href "/docs/authorization.html")) "Authorization"))
+			   (li (@ (class "topless"))
 			       (a (@ (href "/docs/config.html")) "Usage & Configuration"))
 			   (li (@ (class "topless"))
 			       (a (@ (href "/docs/twitter.html")) "Accessing Twitter")))))

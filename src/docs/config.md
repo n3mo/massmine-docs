@@ -1,126 +1,114 @@
 ((title . "Using MassMine")
  (layouts "docs.sxml"))
 
-# Using and Configuring MassMine 
+MassMine's behavior is controlled via options set either directly on the command line, or by using a configuration file (or a combination of both). For most options, MassMine accepts short and long versions. For example, the following long format command
 
-Complete usage instructions and examples are coming soon. But don't let this stop you! MassMine comes with built-in help. See what options are available to you with
+    massmine --count=50
+
+is equivalent to the following short format version
+
+    massmine -c 50
+
+Users are free to use whichever form is preferred, but for the sake of clarity long format options will be used for this documentation.
+
+# Getting Help
+MassMine ships with built-in help to familiarize users with features. See what options are available to you with
 
     massmine --help
 
-or, equivalently
+<div class="raw">
+Usage: massmine ... [options...]<br>
+<br>
+&#160; -h, --help&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Help information<br>
+&#160; -v, --version&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Version information<br>
+&#160; -p, --project=NAME&#160;&#160;&#160;&#160;&#160;Create project<br>
+&#160; -a, --auth=FILE&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Credentials file<br>
+&#160; -o, --output=FILE&#160;&#160;&#160;&#160;&#160;&#160;Write to file<br>
+&#160; -t, --task=TASK&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Task name<br>
+&#160; -q, --query=QUERY&#160;&#160;&#160;&#160;&#160;&#160;Query string<br>
+&#160; -c, --count=NUM&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Number of records<br>
+&#160; -d, --dur=SECOND&#160;&#160;&#160;&#160;&#160;&#160;&#160;Max runtime<br>
+&#160; -g, --geo=LOCATION&#160;&#160;&#160;&#160;&#160;Location<br>
+&#160; -l, --lang=LANG&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Language<br>
+&#160; -u, --user=NAME&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Screen name<br>
+&#160;&#160;&#160;&#160;&#160;&#160;--date=YYYYMMDD&#160;&#160;&#160;&#160;Date (or date range)<br>
+&#160;&#160;&#160;&#160;&#160;&#160;--config=FILE&#160;&#160;&#160;&#160;&#160;&#160;Config file<br>
+&#160;&#160;&#160;&#160;&#160;&#160;--no-splash&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Inhibit splash screen<br>
+</div>
 
-    massmine -h
+The help printout indicates what options are available, and which can be used with the short or long format syntax.
 
-Examples are provided with
+The help option also accepts keywords matching the available options. For example, to learn more about the --count option you can run
 
-    massmine -h examples
+    massmine --help count
 
-Finally, to see available data sources, try
+<div class="raw">
+Request a number of records for tasks that accept limits<br>
+Example(s): 'massmine --count=100'<br>
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;'massmine -c 100'<br>
+</div>
 
-    massmine -h task
+In addition to per-option help, example commands for collecting data are provided with
 
-<!-- You control MassMine's behavior with user configuration files. These files are [YAML](http://en.wikipedia.org/wiki/YAML) formatted (that is, they are structured for a computer to read, but are also human-readable). An example configuration file called *mmconfig* is included with MassMine in the "examples" folder of your installation. As you begin to use MassMine, a useful strategy is to copy the example file to another location and then the edit the copy. While editing, change the text according to your goals, but preserve the indentation patterns.  -->
+    massmine --help examples
 
-<!-- Think of configuration files as a set of simple instructions you would like MassMine to carry out. The contents of the config files are organized hierarchically, with information grouped by the level of indentation. Importantly, the amount of indentation is not important provided you are consistent throughout. The contents of your configuration file depend upon your research objectives, but the creation of a sample config file is described below to demonstrate the logic of controlling MassMine.  -->
+# Using and Configuring MassMine 
 
-<!-- ## Usage -->
+Fetching data using MassMine involves composing a series of options that describe your data collection request. To compose such a request, you must:
 
-<!-- When started, you can specify a custom configuration file by including the file name after the call to MassMine. Assuming you have a file called “my-config” in the same directory you are working in, you can start MassMine as follows: -->
+1. Choose an appropriate **task**
+2. Include any necessary options to specify the details of your data request.
 
-<!--     ~/path/to/massmine my-config -->
+## Choosing a Task
 
-<!-- If you do not specify a configuration file in this manner, MassMine will search for a configuration file called "mmconfig" in the following locations, in this order: -->
+Data access methods in MassMine are referred to as "tasks". Each task corresponds to a different data source. To see a list of all available tasks, use the help functionality:
 
-<!-- 1. In the current directory that you're calling MassMine in. -->
-<!-- 2. In the "examples" folder of the MassMine installation, wherever it was installed on your computer. -->
+    massmine --help task
 
-<!-- If no file can be found in these locations, MassMine stops with an error. -->
+A listing of available tasks is printed to the terminal, each with a brief description. Next, it is important to learn what MassMine options are available for each task. To inspect these options, use
 
+    massmine --help task-options
 
-<!-- ## Example Walkthrough -->
+Some tasks require zero options, such as the "twitter-locations" task. To run such tasks, the command is simply
 
-<!-- Imagine that you are interested in identifying Twitter [hashtags](https://en.wikipedia.org/wiki/Hashtag) associated with an ongoing political election, with the eventual goal of tracking the most popular hashtags that you discover. A sensible starting point might be to collect 1000 tweets that include the keyword "election". Later, you will process those tweets to identify any #hashtags present in the data. To accomplish this task, your configuration file should contain information regarding: -->
+    massmine --task=twitter-locations
 
-<!-- 1. **service**: Which service you would like use (Twitter, in this example) -->
-<!-- 2. **authentication**: Your Twitter authorization credentials -->
-<!-- 3. **task**: Instructions describing what data you want to collect -->
+Most tasks, however, accept additional optional and/or required information as described in the help printout.
 
-<!-- ### Service -->
+## Composing Data Requests
 
-<!-- MassMine can target multiple sources of online data. To choose which source you would like to target, you specify a *service*. In our example, we want to target twitter. To do so, we include the following text in our configuration file: -->
+Once you know which task you would like, you are ready to compose a data collection request. Let's assume you would like to search for tweets on Twitter that contain the keyword "love". Using `massmine --help task` we learn that the appropriate task to use is called "twitter-search". Next, we use `massmine --help task-options` to determine which options the twitter-search task accepts. We find:
 
-<!--     service : twitter -->
+<div class="raw">
+twitter-search -- query* count geo lang
+</div>
 
-<!-- ### Authentication -->
+It seems that we must include the --query option. We can also optionally specify --count --geo and --lang. Let's assume that we would like to collect 200 tweets matching the query "love". We can now compose our custom data request:
 
-<!-- To use Twitter, you must include information regarding your Twitter account application(s) using the configuration options `mm_apps`, `mm_keys`, and `mm_secrets`. An example config file might include: -->
+    massmine --task=twitter-search --count=200 --query=love
 
-<!--     mm_apps: -->
-<!--      - TwitterAppName -->
-     
-<!--     mm_keys: -->
-<!--      - YourKeyGoesHere -->
-     
-<!--     mm_secrets: -->
-<!--      - YourSecretGoesHere -->
+Note that the order of the options does not matter. The above command could be rewritten as
 
-<!-- The value of `mm_apps` is the name of your Twitter application. You are free to call this whatever you like, and this value will only be used when MassMine walks you through the authentication process for the first time. `mm_keys` and `mm_secrets` should include the key and secret codes provided to you by Twitter (see the detailed [Twitter documentation](/docs/twitter.html) for more information)) -->
+    massmine --query=love --count=200 --task=twitter-search
 
-<!-- If you manage multiple Twitter application accounts, you can include them all easily. If you provide multiple accounts in this fashion, MassMine will offer a choice of which account to authenticate with: -->
+If you run one of the above commands, the resulting data (in JSON format) will be printed to your terminal. This is probably not what you want. MassMine provides two methods for saving your data.
 
-<!--     mm_apps: -->
-<!--      - TwitterAppName1 -->
-<!--      - TwitterAppName2 -->
-     
-<!--     mm_keys: -->
-<!--      - YourKeyGoesHere1 -->
-<!--      - YourKeyGoesHere2 -->
-     
-<!--     mm_secrets: -->
-<!--      - YourSecretGoesHere1 -->
-<!--      - YourSecretGoesHere2 -->
+**Option 1: Save directly to disk with massmine**
 
-<!-- ### Task -->
+First, you can use the built-in option `--output` to have MassMine write the data to a file. This options accepts file paths and names (existing files will trigger a warning from massmine). Building on our previous command, we can save our data to the current working directory with:
 
-<!-- We have decided to target the service *Twitter*. Now, we must tell MassMine what information we are interested in. In our configuration file, this amounts to identifying a *task*, along with various *options*. The MassMine [Twitter documentation](/docs/twitter.html) contains a complete listing of twitter *tasks* and *options*. For our example, we want to fetch 1000 existing tweets that match a given search query (i.e., tweets that include the word "election"). To accomplish this, we can use the "search" *task* with several options: -->
+    massmine --task=twitter-search --count=200 --query=love --output=mydata.json
 
-<!--     twitter: -->
-<!--      task : search  -->
-<!--      options: -->
-<!--       file.name : twitter_data.csv -->
-<!--       query     : election -->
-<!--       tweets    : 1000 -->
+Include a file path to save to a specific directory (relative and absolute file paths are accepted):
 
-<!-- Notice that "task" and "options" are indented relative to the line containing "twitter:". This indicates that the information on these lines corresponds to the line "twitter:". Under "options:" we find three additional configurations, each indented further still. -->
+    massmine --task=twitter-search --count=200 --query=love --output=./results/mydata.json
 
-<!-- The option "file.name" indicates the file name into which the resulting Twitter data will be written. With "query" we are able to specify our search term, and with "tweets" we indicate that we desire 1000 matching tweets. -->
+**Option 2: Use shell redirects to save your data**
 
-<!-- Are you confused about how you were supposed to know to use the options "file.name," "query," and "tweets?" That's alright---you weren't supposed to know. That's what this documentation is for! To learn about all of the tasks and options that are available for accessing Twitter, read the [full documentation](/docs/twitter.html). -->
+MassMine is designed to work with tradition Linux/Unix pipelines, so output redirection works:
 
-<!-- ### Putting It All Together -->
+    massmine --task=twitter-search --count=200 --query=love > mydata.json
 
-<!-- Combining the configuration settings from above, we can create a single configuration file called "my-config" that contains the following lines: -->
+as well as piping
 
-<!--     service : twitter -->
-     
-<!--     mm_apps: -->
-<!--      - TwitterAppName -->
-     
-<!--     mm_keys: -->
-<!--      - YourKeyGoesHere -->
-     
-<!--     mm_secrets: -->
-<!--      - YourSecretGoesHere -->
-     
-<!--     twitter: -->
-<!--      task : search  -->
-<!--      options: -->
-<!--       file.name : twitter_data.csv -->
-<!--       query     : election -->
-<!--       tweets    : 1000 -->
-
-<!-- Assuming the file we created is in the same directory that we are working in, we can now run MassMine accordingly by specifying the file: -->
-
-<!--     ~/path/to/massmine my-config -->
-
-<!-- which will eventually create a file called "twitter_data.csv". At the time of this writing, a quick analysis of the results reveals that the top 10 hashtags were #vicvotes, #CameronMustGo, #VicVotes, #tcot, #auspol, #Green14, #ccot, #ASeasonOfMiracles, #Macedon, and #pjnet.  -->
+    massmine --task=twitter-search --count=200 --query=love | tee output.json

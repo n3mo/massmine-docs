@@ -43,6 +43,7 @@
 #sidebar h1 {
     text-align:left;
     font-size:12pt;
+    width: 250px;
 }
 
 #sidebar ul ul {

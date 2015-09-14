@@ -15,6 +15,11 @@ Download a copy of the latest version for your computer's architecture
 
 
 <div><a href="http://www.massmine.org/downloads/massmine-0.9.5-linux-x86_64.tar.gz"><img alt="Download MassMine" src="/images/download_icon.png" height="50" width="50" style="vertical-align:middle">   MassMine for 64 bit Linux (tar.gz)</a> | <b>MD5 checksum:</b> 6553c284663f39ec6810581416a40cdb</div>
+
+<div><a href="http://www.massmine.org/downloads/massmine-0.9.5-OSX-10.10.zip"><img alt="Download MassMine" src="/images/download_icon.png" height="50" width="50" style="vertical-align:middle">   MassMine for OS X (zip)</a> | <b>MD5 checksum:</b> e005ee4a1124f3110ae3bc3e517f7d73</div>
+
+
+<div><a href="http://www.massmine.org/downloads/massmine-0.9.5-OSX-10.10.tar.gz"><img alt="Download MassMine" src="/images/download_icon.png" height="50" width="50" style="vertical-align:middle">   MassMine for OS X (tar.gz)</a> | <b>MD5 checksum:</b> 4e47db0409e727dde91bf8ce7bbda3a0</div>
 <div class="hint">A custom package has been built for University of Florida Research Computing users. This bundle contains both MassMine and a data cleaning tool called <a href="https://github.com/n3mo/jsan">jsan (The JSON Swiss Army kNife)</a>
 
 <br><br>

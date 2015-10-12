@@ -477,3 +477,17 @@ tbody tr.odd td		{
     font-family: source-sans, ConcourseMedium, Consolas, Monaco, Courier, Courier New;
     width: 75%;
 }
+
+.task {
+    font-size: 20px;
+    width: 250px;
+    background: #99CCFF;
+    border: 1px solid #006699;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+ul {
+    list-style: square;
+    font-size: 16pt;
+}

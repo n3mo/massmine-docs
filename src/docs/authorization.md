@@ -5,9 +5,10 @@
 
 Often, API data sources require authentication, and setup is necessary before MassMine can be authorized to collect data. This section explains how to access the required keys and tokens that allow API access, and how to save those credentials for use in ongoing data colletion projects. The steps below are a one-time setup. Once completed, MassMine will automatically connect to the available data sources for collection projects. 
 
-**The following MassMine sources DO NOT require credentials or setup for access:**
+**The following MassMine sources require credentials or setup for access:**
 
-- Wikipedia
+- Twitter
+- Tumblr
 
 ## Twitter Authentification
 

@@ -69,7 +69,7 @@ Returns a list of valid geo-locations [as Yahoo Where on Earth Indentifiers (WOE
 <br></br><br></br>
 <div class="task">twitter-sample</div>
 
-Returns a random sample of tweets as they occur in *real time*. Up to 10% of Twitter's actual volume is returned. Returns up to a maximum number of tweets requested OR until a specified date/time is reached. Both "count" and "dur" can be specified, in which case the task finished whenever either target is reached.
+Returns a random sample of tweets as they occur in *real time*. Up to 1% of Twitter's actual volume is returned. Returns up to a maximum number of tweets requested OR until a specified date/time is reached. Both "count" and "dur" can be specified, in which case the task finished whenever either target is reached.
 
 ### Parameters
 
@@ -114,7 +114,7 @@ Search for *pre-existing* tweets matching a given search phrase. Not all tweets 
 <br></br><br></br>
 <div class="task">twitter-stream</div>
 
-Returns tweets as they occur in *real time*, matching either a search phrase, a user name, or a location. Up to 10% of Twitter's actual volume is returned. Returns up to a maximum number of tweets requested OR until a specified date/time is reached. Both "count" and "dur" can be specified, in which case the task finished whenever either target is reached.
+Returns tweets as they occur in *real time*, matching either a search phrase, a user name, or a location. Up to 1% of Twitter's actual volume is returned. Returns up to a maximum number of tweets requested OR until a specified date/time is reached. Both "count" and "dur" can be specified, in which case the task finished whenever either target is reached.
 
 ### Parameters
 

@@ -74,7 +74,8 @@
 	     (div (@ (id "documentation"))
 		  (div (@ (class "warning"))
 		       "This project is currently in
-pre-release form. Features are subject to change. Upcoming version 1.0.0 will mark the first stable release")
+beta form. Although compatibility-breaking changes are unlikely
+to occur, upcoming version 1.0.0 will mark the first stable release")
 		  (inject ,contents)))
 	(footer (@ (id "site-footer"))
 		(br)

@@ -3,7 +3,7 @@
   (html (@ (xmlns "http://www.w3.org/1999/xhtml"))
 	(head
 	 (meta (@ (content "text/html; charset=UTF-8") (http-equiv "content-type"))) 
-	 (meta (@ (content "MassMine: Your Access To Big Data") (name "Social Media Data Mining"))) 
+	 (meta (@ (content "MassMine: Your Access To Data") (name "Social Media Data Mining"))) 
 	 (meta (@ (name "massmine"))) 
 	 (meta (@ (content "Nicholas Van Horn") (name "author"))) 
 	 (link (@ (href "/style.css") (rel "stylesheet") (type "text/css")))
@@ -47,7 +47,7 @@
 		       (a (@ (href "/"))
 			  (span (@ (class "header-title")) "MassMine:")
 			  (span (@ (class "header-subtitle"))
-				"Your Access To Big Data:")))))
+				"Your Access To Data:")))))
 	(div (@ (id "docs-container"))
 	     (div (@ (id "sidebar"))		  
 		  (div (@ (id "sidebar-content"))

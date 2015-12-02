@@ -1,4 +1,4 @@
-((title . "MassMine: Your Access To Big Data"))
+((title . "MassMine: Your Access To Data"))
 
 MassMine is a social media mining and archiving application that simplifies the process of collecting and managing large amounts of data across multiple sources. It is designed with the researcher in mind, providing a flexible framework for tackling individualized research needs. MassMine is designed to run both on personal computers and dedicated servers/clusters. MassMine handles credential authorizations, rate limiting, data acquisition & archiving, as well as customized data export and analysis.
 
@@ -18,7 +18,7 @@ MassMine is a social media mining and archiving application that simplifies the 
 
 If you present or publish work that uses MassMine, please cite this website:
 
-<reference><p class="bibreference">Van Horn, N. M. & Beveridge, A. (2014). *MassMine: Your Access To Big Data*. http://www.massmine.org</p></reference>
+<reference><p class="bibreference">Van Horn, N. M. & Beveridge, A. (2014). *MassMine: Your Access To Data*. http://www.massmine.org</p></reference>
 
 MassMine is currently being used for research and as a pedagogical tool at The Ohio State University, the University of Florida, Capital University, and Clemson University. See the [About page](/about.html) for more information. Recent conference presentations involving MassMine include:
 

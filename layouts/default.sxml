@@ -53,7 +53,7 @@
 		   (inject ,contents))
 	      (footer (@ (id "site-footer"))
 		      (br)
-		      "© 2014-2015"
+		      "© 2014-2016"
 		      (br)
 		      "Content and images are copyrighted by Nicholas Van Horn & Aaron Beveridge"
 		      (br)

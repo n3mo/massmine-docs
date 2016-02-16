@@ -132,3 +132,28 @@ For large data sets, such as when pulling data from the twitter-stream task, it 
     # copy of the desired fields. This saves the headache of converting a huge
     # file later
 	massmine --task=twitter-stream --query=love --count=2000000 | tee mydata.json | jsan --output=mydata.csv --keep text user:screen_name
+
+# Alternative Configuration File
+
+For complex MassMine data requests the command line options can become long and unwieldy. For such situations, MassMine can also be controlled via a configuration file by use of the `--config=FILE` option. The configuration file should be a plain text file with the following format:
+
+- Each line should have the format `option = value`, where `option` should be any valid long-format option (e.g., `task` and not `t`).
+- `value` can be any valid number or text string (with no quotes).
+- Each line should contain only ONE option.
+
+For example, the following command line call to MassMine:
+
+    massmine --task=twitter-search --count=200 --query=love --output=mydata.json
+
+can be called via a configuration file as
+
+    massmine --config=my_config.txt
+	
+Assuming you first create a file called `my_config.txt` with the following lines:
+
+    task = twitter-search
+	count = 200
+	query = love
+	output = mydata.json
+	
+	

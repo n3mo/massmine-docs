@@ -23,8 +23,8 @@ Download a copy of the latest version for your computer's architecture
 <div class="hint">A custom package has been built for University of Florida Research Computing users. This bundle contains both MassMine and a data cleaning tool called <a href="https://github.com/n3mo/jsan">jsan (The JSON Swiss Army kNife)</a>
 
 <br><br>
-<div><a href="http://www.massmine.org/downloads/massmine-toolkit-hipergator.zip"><img alt="Download MassMine" src="/images/download_icon.png" height="50" width="50" style="vertical-align:middle">   MassMine Toolkit (zip format)</a> | <b>MD5 checksum:</b> f8184e7391f2de62402c2113b33a4c0d</div>
-<div><a href="http://www.massmine.org/downloads/massmine-toolkit-hipergator.tar.gz"><img alt="Download MassMine" src="/images/download_icon.png" height="50" width="50" style="vertical-align:middle">   MassMine Toolkit (tar.gz format)</a> | <b>MD5 checksum:</b> aa97119390ad5e0cca5f41f5f8a554e2</div>
+<div><a href="http://www.massmine.org/downloads/massmine-toolkit-hipergator.zip"><img alt="Download MassMine" src="/images/download_icon.png" height="50" width="50" style="vertical-align:middle">   MassMine Toolkit (zip format)</a> | <b>MD5 checksum:</b> f5edcf1cf661cf52283d27fddefe9799</div>
+<div><a href="http://www.massmine.org/downloads/massmine-toolkit-hipergator.tar.gz"><img alt="Download MassMine" src="/images/download_icon.png" height="50" width="50" style="vertical-align:middle">   MassMine Toolkit (tar.gz format)</a> | <b>MD5 checksum:</b> b414cc5b32e58d191ad9fded8c9cef7f</div>
 </div>
 
 ## Step 2: Install

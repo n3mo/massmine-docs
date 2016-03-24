@@ -7,14 +7,14 @@ MassMine is designed to run on Linux and Mac OSX. Pre-built, self-contained appl
 
 MassMine should run on most versions of Linux, FreeBSD, OpenBSD, and Mac OS X. Savvy users are encouraged to build MassMine from source (and share their experiences). Build instructions follow below.
 
-## Step 1: Download
+## Step 1: Download Current Version: 0.11.0 (2016-03-11)
 
 Download a copy of the latest version for your computer's architecture
 
-<div><a href="http://www.massmine.org/downloads/massmine-0.10.0-linux-x86_64.zip"><img alt="Download MassMine" src="/images/download_icon.png" height="50" width="50" style="vertical-align:middle">   MassMine for 64 bit Linux (zip)</a> | <b>MD5 checksum:</b> 8c2f585201de1ed121af11d792036974</div>
+<div><a href="http://www.massmine.org/downloads/massmine-0.11.0-linux-x86_64.zip"><img alt="Download MassMine" src="/images/download_icon.png" height="50" width="50" style="vertical-align:middle">   MassMine for 64 bit Linux (zip)</a> | <b>MD5 checksum:</b> 89001d2f62a7cdba2cfc872eeb8d21f5</div>
 
 
-<div><a href="http://www.massmine.org/downloads/massmine-0.10.0-linux-x86_64.tar.gz"><img alt="Download MassMine" src="/images/download_icon.png" height="50" width="50" style="vertical-align:middle">   MassMine for 64 bit Linux (tar.gz)</a> | <b>MD5 checksum:</b> 82bae0322c8af3f7973274c0517dd067</div>
+<div><a href="http://www.massmine.org/downloads/massmine-0.11.0-linux-x86_64.tar.gz"><img alt="Download MassMine" src="/images/download_icon.png" height="50" width="50" style="vertical-align:middle">   MassMine for 64 bit Linux (tar.gz)</a> | <b>MD5 checksum:</b> d6e658c5fb9ccc97f75891bd94a7d337</div>
 
 <div><a href="http://www.massmine.org/downloads/massmine-0.11.0-OSX-10.11.zip"><img alt="Download MassMine" src="/images/download_icon.png" height="50" width="50" style="vertical-align:middle">   MassMine for OS X (zip)</a> | <b>MD5 checksum:</b> 0cd0dcd72256b1c0c1db11b285df7bbb</div>
 

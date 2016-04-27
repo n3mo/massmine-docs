@@ -259,11 +259,12 @@ h1  {
     font-weight: bold;
     font-size: 24px; /* was 32pt with concourse */
     line-height: 34px;
-    width: 600px;
+    /* width: 900px; */
     margin-bottom: 15px;
     letter-spacing: 0px;
-    color: #838B8B;
+    color: #333;
     text-rendering: optimizeLegibility;
+    border-top: 2px solid #ccc;
 
 }
 
@@ -271,11 +272,11 @@ h2, h2.entry_title {
     font-family: 'Equity-Text-B', serif;
     font-size: 22px; /* was 32pt with concourse */
     line-height: 34px;
-    width: 600px;
+    /* width: 900px; */
     margin-bottom: 15px;
     letter-spacing: 0px;
-    color: #333;
-    border-top: 1px solid #ccc;
+    color: #838B8B;
+    /* border-top: 1px solid #ccc; */
     text-rendering: optimizeLegibility;
 }
 
@@ -288,7 +289,7 @@ h3 {
     color: #333;
     font-size: 19px;
     font-family: source-sans, Helvetica Neue, Calibri, Arial, Times New Roman, serif;
-    border-top: 1px solid #ccc;
+    /* border-top: 1px solid #ccc; */
 }
 
 h4 {
@@ -297,7 +298,7 @@ h4 {
     margin-top: 20px;
     margin-bottom: 10px;
     padding-top: 2px;
-    border-top: 1px solid #ccc;
+    /* border-top: 1px solid #ccc; */
     color: #333;
     font-size: 17px;
     font-family: source-sans, Helvetica Neue, Calibri, Arial, Times New Roman, serif;

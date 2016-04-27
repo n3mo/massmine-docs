@@ -72,7 +72,11 @@
 			   (li (@ (class "topless"))
 			       (a (@ (href "/docs/wikipedia.html")) "Wikipedia"))
 			   (li (@ (class "topless"))
-			       (a (@ (href "/docs/web.html")) "Web (URL) Scraping")))))
+			       (a (@ (href "/docs/web.html")) "Web (URL) Scraping")))
+		       (h1 "Data Analysis")
+		       (ul (@ (class "nobullet"))
+			   (li (@ (class "topless"))
+			       (a (@ (href "/docs/twitter-analysis.html")) "Twitter")))))
 	     (div (@ (id "documentation"))
 		  (div (@ (class "warning"))
 		       "This project is currently in

@@ -31,7 +31,7 @@ For large data sets, such as when pulling data from the twitter-stream task, it 
 To learn more about using `jsan`, please check the [official documentation online](https://github.com/n3mo/jsan).
 
 # Loading a massmine dataset into statistical software
-To perform any analysis, you must read the data in one of two ways:
+To perform any analysis, you must process the data in one of two ways:
 
 1. Load the entire dataset into memory
 2. Read the data file one line at a time
@@ -45,14 +45,84 @@ This section assumes you have converted your massmine JSON data into CSV format 
 
 The following snippet assumes your data is in CSV format in a file called "mydata.csv". Replace the filename when appropriate:
 
-    # Read the data into memory. Here we store the results in a
-	# data frame called tweets
+    ## Read the data into memory. Here we store the results in a
+	## data frame called tweets
 	tweets <- read.csv("mydata.csv", header = TRUE, stringsAsFactors = FALSE)
 	
-	# Data columns can be viewed with the names() function:
+	## Data columns can be viewed with the names() function:
 	names(tweets)
 	
-	# To extract a given column, use the $ syntax. For example, to extract
-	# the tweet text for every tweet, use
+	## To extract a given column, use the $ syntax. For example, to extract
+	## the tweet text for every tweet, use
 	tweets$text
+	
+## Read a CSV dataset into memory in Racket Scheme
+This section assumes you have converted your massmine JSON data into CSV format (see above).
+
+The following snippet assumes your data is in CSV format in a file called "mydata.csv". Replace the filename when appropriate:
+
+	;;; Required dependency: csv-reading. 
+	;;; Install with `raco pkg install csv-reading`
+	(require csv-reading)
+
+    ;;; Read the data into memory. Here we store the results in a 
+	;;; list of lists called tweets
+	(define tweets (with-input-from-file "mydata.csv"
+		 (λ () (csv->list (current-input-port))))) 
+		 
+	;;; Data columns can be view by inspecting the first row (i.e., list)
+	(first tweets)
+	
+	;;; Assuming the tweet text is the third "column", we index it with 2 
+	;;; (Racket uses zero-indexing). This will return every tweet's text in 
+	;;; your data set
+	(map (λ (x) (list-ref x 2)) tweets)
+	
+# "Cleaning" text strings
+Often, it is advisable to pre-process, or "clean," text before beginning any complex analysis. This can take many forms, but often includes:
+
+1. **Homogenizing character encoding**: Some text is represented as ASCII, some as Unicode. Unicode allows for many more characters and is the preferred encoding scheme. Sometimes it is necessary to convert heterogeneous encoding into a common scheme. This is especially true if data from multiple sources will be combined.
+2. **Removing capitalization**: When calculating word frequencies, for example, the difference between "home," "Home," "HOME," etc. is uninteresting. Typically, it's more useful to treat these variations as the same word. This is more easily accomplished by first converting all letters to lowercase.
+3. **Collapsing whitespace**: Users often include extra whitespace in their posts, including spaces, tabs, newlines, etc. Typically, these are not meaningful components of the message. Collapsing whitespace usually involves converting sequences of whitespace into single space characters.
+4. **Removing punctuation**: Punctuation can be meaningful, such as emoji sequences that convey emotion. Often, punctuation is not meaningful. In these situations, it adds spurious artifacts in an analysis. In these situations, removing punctuation can be stripped out to leave just the words contained in a message.
+
+## Homogenizing character encoding in the R Statistical Language
+The following code snippets assume your dataset is loaded into R as a data frame called `tweets` (see above)
+
+    ## Convert, as necessary, character encoding to Unicode UTF-8
+	tweets$text <- iconv(tweets$text, "", "UTF-8")
+
+## Removing capitalization in the R Statistical Language
+The following code snippets assume your dataset is loaded into R as a data frame called `tweets` (see above)
+
+	## Lowercase everything
+	tweets$text <- tolower(tweets$text)
+
+## Collapsing whitespace in the R Statistical Language
+The following code snippets assume your dataset is loaded into R as a data frame called `tweets` (see above)
+
+    ## Collapse extra whitespace into single space characters
+	tweets$text <- gsub("[[:space:]]+", " ", tweets$text)
+
+## Removing punctuation in the R Statistical Language
+The following code snippets assume your dataset is loaded into R as a data frame called `tweets` (see above)
+
+    ## Heavy handed approach. This removes all punctuation.
+    tweets$text <- gsub("[[:punct:]]+", " ", tweets$text)
+
+Web links (URLs) are problematic, as they are a mixture of punctuation and characters. If your data contains many URLs, consider removing them *BEFORE* removing punctuation. Matching URLs is very difficult. The following trick does a decent job of stripping URLs, and then removes punctuation:
+
+    ## Remove URLs
+    tweets$text <- gsub("(http|https)([^/]+).*", " ", tweets$text)
+	
+    ## Now remove punctuation
+    tweets$text <- gsub("[[:punct:]]+", " ", tweets$text)
+	
+# Identifying hashtags
+What hashtags are present in your data? It's easy to find out!
+
+## Listing hashtags in the R Statistical Language
+The following code snippets assume your dataset is loaded into R as a data frame called `tweets` (see above)
+
+    ## What hashtags do we find across all tweets?
 	

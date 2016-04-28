@@ -119,10 +119,43 @@ Web links (URLs) are problematic, as they are a mixture of punctuation and chara
     tweets$text <- gsub("[[:punct:]]+", " ", tweets$text)
 	
 # Identifying hashtags
-What hashtags are present in your data? It's easy to find out!
+What #hashtags are present in your data? Let's find out!
 
 ## Listing hashtags in the R Statistical Language
 The following code snippets assume your dataset is loaded into R as a data frame called `tweets` (see above)
 
     ## What hashtags do we find across all tweets?
+    hash.regexp <- "#[[:alpha:]][[:alnum:]_]+"
+    hashtags <- unlist(sapply(1:length(tweets$text), function (x) {
+        regmatches(tweets$text[x], 
+                   gregexpr(hash.regexp, tweets$text[x]))}))
+
+The resulting variable `hashtags` is a vector containing all observed hashtags, including repeats. To determine the frequency of each hashtag in your data set, use the `table()` function:
+
+    ## Tabulate the number of occurrences of each hashtag
+	table(hashtags)
 	
+    ## Better yet, sort frequencies in descending order to see
+	## which hashtags were the most popular
+	sort(table(hashtags), decreasing = TRUE)
+	
+# Identifying @user mentions
+What @users are present in your data set? The answer requires a similar strategy to identifying #hashtags
+
+## Listing @users in the R Statistical Language
+The following code snippets assume your dataset is loaded into R as a data frame called `tweets` (see above)
+
+    ## What users do we find across all tweets?
+    user.regexp <- "@[[:alpha:]][[:alnum:]_]+"
+    usernames <- unlist(sapply(1:length(tweets$text), function (x) {
+        regmatches(tweets$text[x], 
+                   gregexpr(user.regexp, tweets$text[x]))}))
+
+The resulting variable `usernames` is a vector containing all observed @usernames, including repeats. To determine the frequency of each user in your data set, use the `table()` function:
+
+    ## Tabulate the number of occurrences of each @username
+	table(usernames)
+	
+    ## Better yet, sort frequencies in descending order to see
+	## which usernames were the most popular
+	sort(table(usernames), decreasing = TRUE)

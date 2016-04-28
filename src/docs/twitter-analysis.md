@@ -38,10 +38,10 @@ To perform any analysis, you must process the data in one of two ways:
 
 Option 2 is sometimes necessary for extremely large data sets, but requires (arguably) more difficult analysis algorithms designed to operate on streaming, line-by-line data.
 
-Thankfully, memory is cheap and most data sets can safely be loaded into memory all at once. Which option is appropriate depends largely on how much RAM your computer has. The following code snippets share how to accomplish option 1.
+Thankfully, memory is cheap and many data sets can safely be loaded into memory all at once. Which option is appropriate depends largely on how much RAM your computer has. The following code snippets share how to accomplish option 1.
 
 ## Read a CSV dataset into memory in the R Statistical Language
-This section assumes you have converted your massmine JSON data into CSV format (see above).
+*This section assumes you have converted your massmine JSON data into CSV format (see above).*
 
 The following snippet assumes your data is in CSV format in a file called "mydata.csv". Replace the filename when appropriate:
 
@@ -57,7 +57,7 @@ The following snippet assumes your data is in CSV format in a file called "mydat
 	tweets$text
 	
 ## Read a CSV dataset into memory in Racket Scheme
-This section assumes you have converted your massmine JSON data into CSV format (see above).
+*This section assumes you have converted your massmine JSON data into CSV format (see above).*
 
 The following snippet assumes your data is in CSV format in a file called "mydata.csv". Replace the filename when appropriate:
 
@@ -84,33 +84,33 @@ Often, it is advisable to pre-process, or "clean," text before beginning any com
 1. **Homogenizing character encoding**: Some text is represented as ASCII, some as Unicode. Unicode allows for many more characters and is the preferred encoding scheme. Sometimes it is necessary to convert heterogeneous encoding into a common scheme. This is especially true if data from multiple sources will be combined.
 2. **Removing capitalization**: When calculating word frequencies, for example, the difference between "home," "Home," "HOME," etc. is uninteresting. Typically, it's more useful to treat these variations as the same word. This is more easily accomplished by first converting all letters to lowercase.
 3. **Collapsing whitespace**: Users often include extra whitespace in their posts, including spaces, tabs, newlines, etc. Typically, these are not meaningful components of the message. Collapsing whitespace usually involves converting sequences of whitespace into single space characters.
-4. **Removing punctuation**: Punctuation can be meaningful, such as emoji sequences that convey emotion. Often, punctuation is not meaningful. In these situations, it adds spurious artifacts in an analysis. In these situations, removing punctuation can be stripped out to leave just the words contained in a message.
+4. **Removing punctuation**: Punctuation can be meaningful, such as emoji sequences that convey emotion. Often, punctuation is not meaningful. In these situations, it adds spurious artifacts in an analysis. In these situations, punctuation can be stripped out to leave just the words contained in a message.
 
 ## Homogenizing character encoding in the R Statistical Language
-The following code snippets assume your dataset is loaded into R as a data frame called `tweets` (see above)
+*The following code snippets assume your dataset is loaded into R as a data frame called `tweets` (see above)*
 
     ## Convert, as necessary, character encoding to Unicode UTF-8
 	tweets$text <- iconv(tweets$text, "", "UTF-8")
 
 ## Removing capitalization in the R Statistical Language
-The following code snippets assume your dataset is loaded into R as a data frame called `tweets` (see above)
+*The following code snippets assume your dataset is loaded into R as a data frame called `tweets` (see above)*
 
 	## Lowercase everything
 	tweets$text <- tolower(tweets$text)
 
 ## Collapsing whitespace in the R Statistical Language
-The following code snippets assume your dataset is loaded into R as a data frame called `tweets` (see above)
+*The following code snippets assume your dataset is loaded into R as a data frame called `tweets` (see above)*
 
     ## Collapse extra whitespace into single space characters
 	tweets$text <- gsub("[[:space:]]+", " ", tweets$text)
 
 ## Removing punctuation in the R Statistical Language
-The following code snippets assume your dataset is loaded into R as a data frame called `tweets` (see above)
+*The following code snippets assume your dataset is loaded into R as a data frame called `tweets` (see above)*
 
-    ## Heavy handed approach. This removes all punctuation.
+    ## Heavy-handed approach. This removes all punctuation.
     tweets$text <- gsub("[[:punct:]]+", " ", tweets$text)
 
-Web links (URLs) are problematic, as they are a mixture of punctuation and characters. If your data contains many URLs, consider removing them *BEFORE* removing punctuation. Matching URLs is very difficult. The following trick does a decent job of stripping URLs, and then removes punctuation:
+Web links (URLs) are problematic, as they are a mixture of punctuation and characters. If your data contains many URLs, consider removing them *BEFORE* removing punctuation. Matching URLs is very difficult. The following trick does a decent job of stripping URLs, and then removes punctuation afterward:
 
     ## Remove URLs
     tweets$text <- gsub("(http|https)([^/]+).*", " ", tweets$text)
@@ -122,7 +122,7 @@ Web links (URLs) are problematic, as they are a mixture of punctuation and chara
 What #hashtags are present in your data? Let's find out!
 
 ## Listing hashtags in the R Statistical Language
-The following code snippets assume your dataset is loaded into R as a data frame called `tweets` (see above)
+*The following code snippets assume your dataset is loaded into R as a data frame called `tweets` (see above)*
 
     ## What hashtags do we find across all tweets?
     hash.regexp <- "#[[:alpha:]][[:alnum:]_]+"
@@ -143,7 +143,7 @@ The resulting variable `hashtags` is a vector containing all observed hashtags, 
 What @users are present in your data set? The answer requires a similar strategy to identifying #hashtags
 
 ## Listing @users in the R Statistical Language
-The following code snippets assume your dataset is loaded into R as a data frame called `tweets` (see above)
+*The following code snippets assume your dataset is loaded into R as a data frame called `tweets` (see above)*
 
     ## What users do we find across all tweets?
     user.regexp <- "@[[:alpha:]][[:alnum:]_]+"
@@ -159,3 +159,48 @@ The resulting variable `usernames` is a vector containing all observed @username
     ## Better yet, sort frequencies in descending order to see
 	## which usernames were the most popular
 	sort(table(usernames), decreasing = TRUE)
+
+# Time series: Tweet frequency as a function of time
+*The following code snippets assume your dataset is loaded into R as a data frame called `tweets` (see above)*
+
+Trending topics can quickly increase and decrease in popularity on Twitter. Visualizing how frequently tweets are occurring can be useful for diagnosing such patterns. In the following example, one can replace the "day" in `cut(tweets.date, breaks = "day")` with "hour", "week", and "month" as appropriate.
+
+    ## Convert date strings to date data type
+    tweets.date <- as.POSIXct(tweets$created_at, format = "%a %b %e %T %z %Y")
+    
+	## Index each tweet by the day of its creation
+    day.index = cut(tweets.date, breaks = "day")
+	
+    ## Count how many tweets occurred on each day
+    tmp <- sapply(levels(day.index),
+      function(x) length(which(day.index==x)))
+	  
+	## Isolate the tweet frequencies
+	counts <- as.vector(tmp)
+	
+	## Plot tweet frequency by day
+	plot(1:length(counts), counts, type="o", lwd = 2,
+         xlab = "Days", ylab = "Frequency",
+         main = "Tweet Frequency As A Function Of Days")
+	grid(col = "darkgray")
+
+The *zoo* package in R provides additional support for working with time/date information. To use the package, first install it:
+
+    install.packages("zoo")
+	
+After loading the package...
+
+    library(zoo)
+	
+...the final plotting procedure can be improved to include the actual dates on the x-axis:
+
+	## Create x-axis increments for each day
+	days <- as.Date(names(tmp))
+
+    ## Plot tweet frequency by day
+    plot(days, counts, type="o", lwd = 2,
+         xlab = "Days", ylab = "Frequency",
+         main = "Tweet Frequency As A Function Of Days")
+    grid(col = "darkgray")
+	
+<div style="padding:20px;margin-left:auto;margin-right:auto;"><img src="/images/twitter-time-series.png";></div>

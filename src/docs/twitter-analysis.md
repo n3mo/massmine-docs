@@ -204,3 +204,66 @@ After loading the package...
     grid(col = "darkgray")
 	
 <div style="padding:20px;margin-left:auto;margin-right:auto;"><img src="/images/twitter-time-series.png";></div>
+
+# Text Mining
+
+## Text Mining Using R's TM Package
+R's TM package provides many standard text mining functions that are useful for Twitter text analysis. Documentation for the TM package is available [here](https://cran.r-project.org/web/packages/tm/tm.pdf).
+
+The following assumes that you have already read your Twitter data into the `tweets` variable using the `read.csv()` example listed above, and that you have already homogenized character encoding, removed capitalization, collapsed whitespace, and removed punctuation.
+
+First, install the TM package:
+
+    install.packages("tm")
+
+### Removing Additional Words from Twitter Text
+In addition to the text transformations already completed, it is usually necessary to remove other words for analysis. Stopwords are common words like "the," "and," "it," "there," and they will confound word frequency analyses if they are not removed. The following will remove English stopwords from text data in TM:
+
+    tweets$text <- removeWords(tweets$text, stopwords(kind="en"))
+
+Sometimes there are other words that need to be removed for reasons pertaining to a specific project or because of particular research question. First, create a variable containing the list of additional words to be removed:
+
+    word.list <- c("cat", "dog", "horse", "chicken")
+
+Next, using the same `removeWords()` function, remove the list of words from the `tweets$text` vector:
+
+    tweets$text <- removeWords(tweets$text, word.list)
+
+### Creating a Corpus and Document-Term Matrix in TM
+A "corpus" is a data type used specifically by the TM package. Using the `tweets$text` vector that contains the tweet texts from the "love" data collection, we can transform this collection of "documents" into a corpus with the following function:
+
+    corpus <- VCorpus(VectorSource(tweets$text))
+
+Once the tweet texts are changed to TM's corpus data type, it can be easily analyzed as a document-term matrix:
+
+    dtm <- DocumentTermMatrix(corpus)
+
+### Summary Statistics of Tweet Texts
+By entering just the document-term matrix variable into the REPL, TM will return summary statistics for the corpus: the number of documents (tweets), the number of original words, sparsity, maximal word length, and weighting.
+
+    dtm
+
+### Removing Sparse Words
+The `removeSparseTerms()` function in the TM package will remove sparse (infrequently occurring) words from the corpus of tweet texts. Based on the summary statistics provided in the previous example, we can use the "sparsity" percentage to determine how many sparse terms to remove. The `0.1` argument in the function below determines what percentage of sparse terms to remove. It is a good idea to save the new document-term matrix with sparse words removed in a different variable in case your first attempt removes too many words:
+
+    dtm1 <- removeSparseTerms(dtm, 0.1)
+
+### Word Frequencies
+Word frequency totals can be returned as a vector by summing the columns of terms in the matrix:
+
+    freq <- colSums(as.matrix(dtm1))
+
+Using the `head()` and `table()` functions, we can see the top 20 most frequent terms in the corpus:
+
+    head(table(freq), 20)
+
+### Word Co-Occurrences
+Word co-occurrences can be determined with the `findAssocs()` function in the TM package. The function below finds which terms co-occur with the word "love" and returns a vector of decimal percentages. If the returned value is `1.0` for a particular word, then it occurs in 100% of the same documents as the word "love." The `corlimit` argument allows you to decide a minimal percentage of co-occurrence to be returned. So, if you set the `corlimit` to `.5`, then any words that co-occur in less than 50% of the texts will be ignored. If sparse words have already been removed from the document, then it is generally best to set the `corlimit` to `0.0`. Using the `word.co` variable to save the returned vector, the following function determines word co-occurrence:
+
+    word.co <- findAssocs(dtm, "love", corlimit=0.0)
+
+Using the `head()` function again, we can see the top 20 words that co-occur with "love" in the tweet texts:
+
+    head(word.co, 20)
+
+Be careful when using word co-occurrence analyses over short periods of time with Twitter data. High volumes of retweets by users can create many 100% co-occurrence values. Retweets are designated with `RT` appearing at the beginning of a tweet's text, and it may be necessary for you to remove all retweeted tweets from your corpus. However, if your dataset has been collected over a long enough period of time, then retweets should not cause a problem. As always, it depends on your particular research question. 

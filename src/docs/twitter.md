@@ -140,7 +140,7 @@ Returns tweets as they occur in *real time*, matching either a search phrase, a 
 <br></br><br></br>
 <div class="task">twitter-trends</div>
 
-Returns the top-10 trends for a given location.
+Returns the top-50 trends for a given location.
 
 ### Parameters
 
@@ -154,7 +154,7 @@ Returns the top-10 trends for a given location.
 <br></br><br></br>
 <div class="task">twitter-trends-nohash</div>
 
-Returns the top-10 trends for a given location, with #hashtags excluded.
+Returns the top-50 trends for a given location, with #hashtags excluded.
 
 ### Parameters
 

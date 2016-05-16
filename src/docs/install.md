@@ -20,12 +20,6 @@ Download a copy of the latest version for your computer's architecture
 
 
 <div><a href="http://www.massmine.org/downloads/massmine-0.11.0-OSX-10.11.tar.gz"><img alt="Download MassMine" src="/images/download_icon.png" height="50" width="50" style="vertical-align:middle">   MassMine for OS X (tar.gz)</a> | <b>MD5 checksum:</b> f2b69dc81d35beaee8a72ce186e9a239</div>
-<div class="hint">A custom package has been built for University of Florida Research Computing users. This bundle contains both MassMine and a data cleaning tool called <a href="https://github.com/n3mo/jsan">jsan (The JSON Swiss Army kNife)</a>
-
-<br><br>
-<div><a href="http://www.massmine.org/downloads/massmine-toolkit-hipergator.zip"><img alt="Download MassMine" src="/images/download_icon.png" height="50" width="50" style="vertical-align:middle">   MassMine Toolkit (zip format)</a> | <b>MD5 checksum:</b> 56f8cdeb679db5d8ee8546dd915a2a89</div>
-<div><a href="http://www.massmine.org/downloads/massmine-toolkit-hipergator.tar.gz"><img alt="Download MassMine" src="/images/download_icon.png" height="50" width="50" style="vertical-align:middle">   MassMine Toolkit (tar.gz format)</a> | <b>MD5 checksum:</b> 9d91631c2cecaafa8d70287be98f906b</div>
-</div>
 
 ## Step 2: Install
 

@@ -27,14 +27,14 @@
 				(alt "MassMine Docs")))
 			  " Documentation")
 		       " | "
-		       (a (@ (href "/about.html"))
-			  (img (@
-				(class "nav-img")
-				(src "/images/question_mark.png")
-				(height 22px) (width 22px)
-				(alt "About")))
-			  " About")
-		       " | "
+		       ;; (a (@ (href "/about.html"))
+		       ;; 	  (img (@
+		       ;; 		(class "nav-img")
+		       ;; 		(src "/images/question_mark.png")
+		       ;; 		(height 22px) (width 22px)
+		       ;; 		(alt "About")))
+		       ;; 	  " About")
+		       ;; " | "
 		       (a (@ (href "https://github.com/n3mo/massmine"))
 			  (img (@
 				(class "nav-img")

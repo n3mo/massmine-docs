@@ -1,7 +1,7 @@
-((title . "MassMine Credential Authorization")
+((title . "MassMine Credential Authentication")
  (layouts "docs.sxml"))
 
-# API Authentification
+# API Authentication
 
 Often, API data sources require authentication, and setup is necessary before MassMine can be authorized to collect data. This section explains how to access the required keys and tokens that allow API access, and how to save those credentials for use in ongoing data colletion projects. The steps below are a one-time setup. Once completed, MassMine will automatically connect to the available data sources for collection projects. 
 
@@ -10,7 +10,7 @@ Often, API data sources require authentication, and setup is necessary before Ma
 - Twitter
 - Tumblr
 
-## Twitter Authentification
+## Twitter Authentication
 
 To collect data from Twitter you must login to your Twitter account and create a new "application." This "application" is not actually software or a computer program, but it is the access point through which MassMine collects data from Twitter. Every Twitter "application" is provided a certain amount of bandwidth<sup>1</sup>, and this limits the amount of free data an "application" may access through Twitter's API. For more details on how Twitter limits data access through their API, visit [Twitter's online documention](https://dev.twitter.com/overview/documentation).  MassMine automatically manages "rate limits" for the user, within the limits permitted by Twitter's bandwidth restrictions.
 
@@ -52,7 +52,7 @@ You will be asked: `Would you like to setup your Twitter credentials?` Answer wi
 
 Next you will be asked to enter your `Consumer Key`. Return to your browser window as shown in last image example above. Copy the consumer key from the webpage, paste it back in your terminal, and then press ENTER. 
 
-Follow the same process for the `Consumer Secret`, `Access Token`, and `Access Token Secret`. Once you have finished copying the 4 secrets and tokens into MassMine, you will see `Authentification setup finished!`. 
+Follow the same process for the `Consumer Secret`, `Access Token`, and `Access Token Secret`. Once you have finished copying the 4 secrets and tokens into MassMine, you will see `Authentication setup finished!`. 
 
 
 *Footnotes:*

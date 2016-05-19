@@ -50,7 +50,7 @@
 			   (li (@ (class "topless"))
 			       (a (@ (href "/docs/install.html")) "Installation"))
 			   (li (@ (class "topless"))
-			       (a (@ (href "/docs/authorization.html")) "Authorization"))
+			       (a (@ (href "/docs/authorization.html")) "Authentication"))
 			   (li (@ (class "topless"))
 			       (a (@ (href "/docs/config.html")) "Usage & Configuration")))
 		       (h1 "Accessing Data Sources")

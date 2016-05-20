@@ -113,26 +113,6 @@ as well as piping
 
     massmine --task=twitter-search --count=200 --query=love | tee output.json
 
-## Working With The Resulting Data
-
-MassMine returns data from all sources as JSON. Depending on your analysis workflow, it can be more desirable to work in a column-oriented data format (such as csv format), such as when importing data into R, SPSS, Excel, or similar. A [companion tool has been created called jsan](https://github.com/n3mo/jsan) (The **J**SON **S**wiss **A**rmy k**N**ife) that provides quick and memory-efficient conversion into column-oriented data formats.
-
-`jsan` can be used after data has been collected. For example:
-
-    # Fetch some data first
-    massmine --task=twitter-search --count=200 --query=love --output=mydata.json
-
-    # Convert the JSON from above into .csv, keeping the
-    # "text" and "user:screen_name" fields
-	jsan --input=mydata.json --output=mydata.csv --keep text user:screen_name
-
-For large data sets, such as when pulling data from the twitter-stream task, it can be advantageous to utilize the streaming capabilities of `massmine` and `jsan` to allow conversion while data is being collected:
-
-    # Big request, piped into jsan using tee to create a .json file AND a .csv
-    # copy of the desired fields. This saves the headache of converting a huge
-    # file later
-	massmine --task=twitter-stream --query=love --count=2000000 | tee mydata.json | jsan --output=mydata.csv --keep text user:screen_name
-
 # Alternative Configuration File
 
 For complex MassMine data requests the command line options can become long and unwieldy. For such situations, MassMine can also be controlled via a configuration file by use of the `--config=FILE` option. The configuration file should be a plain text file with the following format:
@@ -156,4 +136,23 @@ Assuming you first create a file called `my_config.txt` with the following lines
 	query = love
 	output = mydata.json
 	
-	
+# Working With The Resulting Data
+
+MassMine returns data from all sources as JSON. Depending on your analysis workflow, it can be more desirable to work in a column-oriented data format (such as csv format), such as when importing data into R, SPSS, Excel, or similar. A [companion tool has been created called jsan](https://github.com/n3mo/jsan) (The **J**SON **S**wiss **A**rmy k**N**ife) that provides quick and memory-efficient conversion into column-oriented data formats.
+
+`jsan` can be used after data has been collected. For example:
+
+    # Fetch some data first
+    massmine --task=twitter-search --count=200 --query=love --output=mydata.json
+
+    # Convert the JSON from above into .csv, keeping the
+    # "text" and "user:screen_name" fields
+	jsan --input=mydata.json --output=mydata.csv --keep text user:screen_name
+
+For large data sets, such as when pulling data from the twitter-stream task, it can be advantageous to utilize the streaming capabilities of `massmine` and `jsan` to allow conversion while data is being collected:
+
+    # Big request, piped into jsan using tee to create a .json file AND a .csv
+    # copy of the desired fields. This saves the headache of converting a huge
+    # file later
+	massmine --task=twitter-stream --query=love --count=2000000 | tee mydata.json | jsan --output=mydata.csv --keep text user:screen_name
+

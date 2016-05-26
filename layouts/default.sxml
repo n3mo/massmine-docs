@@ -39,7 +39,7 @@
 		       (a (@ (href "/"))
 			  (span (@ (class "header-title")) "MassMine:")
 			  (span (@ (class "header-subtitle"))
-				"Your Access To Data:")))))
+				"Your Access To Data")))))
 	(div (@ (class "gutter"))
 	      (div (@ (id "container"))
 		   (inject ,contents))

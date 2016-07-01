@@ -1,0 +1,100 @@
+#!/bin/bash
+
+#######################################################
+##  massmine.org/ pandoc build script
+#######################################################
+
+# Purge old output files
+rm -rf ./out/*
+
+#######################################################
+## Copy static files to output directory
+#######################################################
+cp src/google8d16c3ad254f56af.html out
+cp -R src/images out
+cp pd-src/index.html out
+cp -pR server-files/* out
+cp pd-src/style.css out/css
+cp pd-src/extra.js out/js
+mkdir out/docs
+
+#######################################################
+## Build documentation
+#######################################################
+
+#docs main
+pandoc ./pd-src/docs/index.md \
+--template ./layouts/docs-nav.html \
+--output ./out/docs/index.html
+
+#install
+pandoc ./pd-src/docs/install.md \
+--template ./layouts/docs-nav.html \
+--output ./out/docs/install.html #\
+#--toc \
+#--toc-depth=2 \
+#--number-sections
+
+#authentication
+pandoc ./pd-src/docs/authorization.md \
+--template ./layouts/docs-nav.html \
+--output ./out/docs/authorization.html #\
+#--toc \
+#--toc-depth=2 \
+#--number-sections
+
+#usage & config
+pandoc ./pd-src/docs/config.md \
+--template ./layouts/docs-nav.html \
+--output ./out/docs/config.html \
+--toc \
+--toc-depth=2 \
+--number-sections
+
+#google trends
+pandoc ./pd-src/docs/google.md \
+--template ./layouts/docs-nav.html \
+--output ./out/docs/google.html #\
+#--toc \
+#--toc-depth=2 \
+#--number-sections
+
+#tumblr
+pandoc ./pd-src/docs/tumblr.md \
+--template ./layouts/docs-nav.html \
+--output ./out/docs/tumblr.html #\
+#--toc \
+#--toc-depth=2 \
+#--number-sections
+
+#twitter
+pandoc ./pd-src/docs/twitter.md \
+--template ./layouts/docs-nav.html \
+--output ./out/docs/twitter.html #\
+# --toc \
+# --toc-depth=1
+# --number-sections
+
+#wikipedia
+pandoc ./pd-src/docs/wikipedia.md \
+--template ./layouts/docs-nav.html \
+--output ./out/docs/wikipedia.html #\
+#--toc \
+#--toc-depth=2 \
+#--number-sections
+
+#web scraping
+pandoc ./pd-src/docs/web.md \
+--template ./layouts/docs-nav.html \
+--output ./out/docs/web.html #\
+#--toc \
+#--toc-depth=2 \
+#--number-sections
+
+#twitter analysis
+pandoc ./pd-src/docs/twitter-analysis.md \
+--template ./layouts/docs-nav.html \
+--output ./out/docs/twitter-analysis.html \
+--toc \
+--toc-depth=2 \
+--number-sections

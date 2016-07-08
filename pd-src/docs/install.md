@@ -10,11 +10,8 @@ abstract:
 
 Download a copy of the latest version for your computer's architecture:
 <ul class="install-list">
-  <li><a href="http://www.massmine.org/downloads/massmine-0.11.0-linux-x86_64.zip"><i class="fa fa-download"></i>   MassMine for 64 bit Linux (zip)</a> | <b>MD5 checksum:</b> 89001d2f62a7cdba2cfc872eeb8d21f5</li>
-  <li><a href="http://www.massmine.org/downloads/massmine-0.11.0-linux-x86_64.tar.gz"><i class="fa fa-download"></i>   MassMine for 64 bit Linux (tar.gz)</a> | <b>MD5 checksum:</b> d6e658c5fb9ccc97f75891bd94a7d337</li>
+  <li><a href="http://www.massmine.org/downloads/massmine-1.0.0-linux-x86_64.zip"><i class="fa fa-download"></i>   MassMine for 64 bit Linux (zip)</a> | <b>MD5 checksum:</b> 92dc6b3ecfe1860d30841c60883af3f9</li>
   <li><a href="http://www.massmine.org/downloads/massmine-0.11.0-OSX-10.11.zip"><i class="fa fa-download"></i>   MassMine for OS X (zip)</a> | <b>MD5 checksum:</b> 0cd0dcd72256b1c0c1db11b285df7bbb</li>
-  <li><a href="http://www.massmine.org/downloads/massmine-0.11.0-OSX-10.11.tar.gz"><i class="fa fa-download"></i>   MassMine for OS X (tar.gz)</a> | <b>MD5 checksum:</b> f2b69dc81d35beaee8a72ce186e9a239</li>
-</ul>
 
 ## Step 2: Install
 

@@ -6,7 +6,7 @@ abstract:
   MassMine should run on most versions of Linux, FreeBSD, OpenBSD, and Mac OS X. Savvy users are encouraged to build MassMine from source (and share their experiences). Build instructions follow below.
 ...
 
-## Step 1: Download Current Version: 0.11.0 (2016-03-11)
+## Step 1: Download Current Version: 1.0.0 (2016-07-08)
 
 Download a copy of the latest version for your computer's architecture:
 <ul class="install-list">

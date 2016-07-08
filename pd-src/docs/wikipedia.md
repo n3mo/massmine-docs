@@ -7,7 +7,7 @@ Task parameters marked * are required. For parameters marked with a + choose onl
 
 <hr/>
 
-#wikipedia-page-links
+# wikipedia-page-links
 
 Returns all links embedded in a given Wikipedia page.
 
@@ -19,7 +19,7 @@ Returns all links embedded in a given Wikipedia page.
 
     massmine --task=wikipedia-page-links --query=Earl_Grey_tea
 
-#wikipedia-search
+# wikipedia-search
 
 Search wikipedia by keyword. Meta-information for all pages containing matches to the search query are returned.
 
@@ -31,27 +31,29 @@ Search wikipedia by keyword. Meta-information for all pages containing matches t
 
     massmine --task=wikipedia-search --query=bergamot
 
-#wikipedia-text
+# wikipedia-text
 
 Returns the full text (plain text, with formatting removed) of a given Wikipedia page.
 
 ## Parameters
 
 - **query***: Wikipedia page title, case sensitive.
+- **lang***: Wikipedia language (e.g., en for English, sp for Spanish, etc.)
 
 ## Example
 
-    massmine --task=wikipedia-text --query=Earl_Grey_tea
+    massmine --task=wikipedia-text --query=Earl_Grey_tea --lang=en
 
-#wikipedia-views
+# wikipedia-views
 
 Returns the daily page views for a given Wikipedia page for a given month.
 
 ## Parameters
 
 - **query***: Wikipedia page title, case sensitive.
+- **lang***: Wikipedia language (e.g., en for English, sp for Spanish, etc.)
 - **date***: Month, as YYYY-MM-DD (day is ignored)
 
 ## Example
 
-    massmine --task=wikipedia-views --query=Earl_Grey_tea --date=2015-09-01
+    massmine --task=wikipedia-views --query=Earl_Grey_tea --lang=en --date=2015-09-01 

@@ -11,21 +11,16 @@ abstract:
 Download a copy of the latest version for your computer's architecture:
 <ul class="install-list">
   <li><a href="http://www.massmine.org/downloads/massmine-1.0.0-linux-x86_64.zip"><i class="fa fa-download"></i>   MassMine for 64 bit Linux (zip)</a> | <b>MD5 checksum:</b> 92dc6b3ecfe1860d30841c60883af3f9</li>
-  <li><a href="http://www.massmine.org/downloads/massmine-0.11.0-OSX-10.11.zip"><i class="fa fa-download"></i>   MassMine for OS X (zip)</a> | <b>MD5 checksum:</b> 0cd0dcd72256b1c0c1db11b285df7bbb</li>
+  <li><a href="http://www.massmine.org/downloads/massmine-1.0.0-OSX-10.11.5.zip"><i class="fa fa-download"></i>   MassMine for OS X (zip)</a> | <b>MD5 checksum:</b> 4b104ac5402e755962d06ea1b4b0c5ef</li>
+</ul>
 
 ## Step 2: Install
 
-Unpack the downloaded file, replacing all "x.x.x" with the version number you downloaded:
-
-For zipped packages
+Unpack the downloaded file, replacing all "x.x.x" with the version number you downloaded (for downloaded Mac OS X bundles, you can simply double click the zipped file to unpack it):
 
     unzip massmine-x.x.x-linux-x86_64.zip
 
-For tarballs
-
-    tar -xzf massmine-x.x.x-linux-x86_64.tar.gz
-
-Either of the above commands will produce a directory called "massmine". This is all you need to get working! Move this directory to somewhere in your file system for safe keeping.
+The above command will produce a directory called "massmine". This is all you need to get working! Move this directory to somewhere in your file system for safe keeping.
 
 Inside the directory "massmine" you will find an executable file called `massmine`. You can run this directly to get started right away. Working from inside the "massmine" directory:
 

@@ -58,6 +58,12 @@ Additionally, you will need the following [Eggs](http://wiki.call-cc.org/eggs) i
 * pathname-expand
 * html-parser
 
+The openssl egg requires the openssl development libraries installed on your system. These can be installed with most package managers (e.g., apt-get, pacman, brew, etc.). 
+
+For example, on Ubuntu:
+
+    sudo apt-get install libssl-dev
+	
 Assuming Chicken Scheme has been properly installed, these eggs (packages) can be installed in a single command:
 
     chicken-install clucker args openssl medea srfi-19 pathname-expand html-parser

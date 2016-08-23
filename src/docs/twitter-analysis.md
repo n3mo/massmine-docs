@@ -16,7 +16,7 @@ MassMine returns data from all sources as JSON. Depending on your analysis workf
     # "text" and "user:screen_name" fields
 	jsan --input=mydata.json --output=mydata.csv --keep text user:screen_name
 
-Which data fields are available for conversion to csv? This depends on what you have requested from Twitter. If you have collected Twitter data using massmine into a file called "mydata.json", you can determine which "columns" (i.e., which data fields) are available with `jsan` using the `--list` option. The values printed by the following command can be passed to `jsan` with either the `--keep` or `--remove` options. 
+Which data fields are available for conversion to csv? This depends on what you have requested from Twitter. If you have collected Twitter data using massmine into a file called "mydata.json", you can determine which "columns" (i.e., which data fields) are available with `jsan` using the `--list` option. The values printed by the following command can be passed to `jsan` with either the `--keep` or `--remove` options.
 
     jsan --input=mydata.json --list
 
@@ -48,36 +48,36 @@ The following snippet assumes your data is in CSV format in a file called "mydat
     ## Read the data into memory. Here we store the results in a
 	## data frame called tweets
 	tweets <- read.csv("mydata.csv", header = TRUE, stringsAsFactors = FALSE)
-	
+
 	## Data columns can be viewed with the names() function:
 	names(tweets)
-	
+
 	## To extract a given column, use the $ syntax. For example, to extract
 	## the tweet text for every tweet, use
 	tweets$text
-	
+
 ## Read a CSV dataset into memory in Racket Scheme
 *This section assumes you have converted your massmine JSON data into CSV format (see above).*
 
 The following snippet assumes your data is in CSV format in a file called "mydata.csv". Replace the filename when appropriate:
 
-	;;; Required dependency: csv-reading. 
+	;;; Required dependency: csv-reading.
 	;;; Install with `raco pkg install csv-reading`
 	(require csv-reading)
 
-    ;;; Read the data into memory. Here we store the results in a 
+    ;;; Read the data into memory. Here we store the results in a
 	;;; list of lists called tweets
 	(define tweets (with-input-from-file "mydata.csv"
-		 (λ () (csv->list (current-input-port))))) 
-		 
+		 (λ () (csv->list (current-input-port)))))
+
 	;;; Data columns can be view by inspecting the first row (i.e., list)
 	(first tweets)
-	
-	;;; Assuming the tweet text is the third "column", we index it with 2 
-	;;; (Racket uses zero-indexing). This will return every tweet's text in 
+
+	;;; Assuming the tweet text is the third "column", we index it with 2
+	;;; (Racket uses zero-indexing). This will return every tweet's text in
 	;;; your data set
 	(map (λ (x) (list-ref x 2)) tweets)
-	
+
 # "Cleaning" text strings
 Often, it is advisable to pre-process, or "clean," text before beginning any complex analysis. This can take many forms, but often includes:
 
@@ -114,10 +114,10 @@ Web links (URLs) are problematic, as they are a mixture of punctuation and chara
 
     ## Remove URLs
     tweets$text <- gsub("(http|https)([^/]+).*", " ", tweets$text)
-	
+
     ## Now remove punctuation
     tweets$text <- gsub("[[:punct:]]+", " ", tweets$text)
-	
+
 # Identifying hashtags
 What #hashtags are present in your data? Let's find out!
 
@@ -127,18 +127,18 @@ What #hashtags are present in your data? Let's find out!
     ## What hashtags do we find across all tweets?
     hash.regexp <- "#[[:alpha:]][[:alnum:]_]+"
     hashtags <- unlist(sapply(1:length(tweets$text), function (x) {
-        regmatches(tweets$text[x], 
+        regmatches(tweets$text[x],
                    gregexpr(hash.regexp, tweets$text[x]))}))
 
 The resulting variable `hashtags` is a vector containing all observed hashtags, including repeats. To determine the frequency of each hashtag in your data set, use the `table()` function:
 
     ## Tabulate the number of occurrences of each hashtag
 	table(hashtags)
-	
+
     ## Better yet, sort frequencies in descending order to see
 	## which hashtags were the most popular
 	sort(table(hashtags), decreasing = TRUE)
-	
+
 # Identifying @user mentions
 What @users are present in your data set? The answer requires a similar strategy to identifying #hashtags
 
@@ -148,14 +148,14 @@ What @users are present in your data set? The answer requires a similar strategy
     ## What users do we find across all tweets?
     user.regexp <- "@[[:alpha:]][[:alnum:]_]+"
     usernames <- unlist(sapply(1:length(tweets$text), function (x) {
-        regmatches(tweets$text[x], 
+        regmatches(tweets$text[x],
                    gregexpr(user.regexp, tweets$text[x]))}))
 
 The resulting variable `usernames` is a vector containing all observed @usernames, including repeats. To determine the frequency of each user in your data set, use the `table()` function:
 
     ## Tabulate the number of occurrences of each @username
 	table(usernames)
-	
+
     ## Better yet, sort frequencies in descending order to see
 	## which usernames were the most popular
 	sort(table(usernames), decreasing = TRUE)
@@ -167,17 +167,17 @@ Trending topics can quickly increase and decrease in popularity on Twitter. Visu
 
     ## Convert date strings to date data type
     tweets.date <- as.POSIXct(tweets$created_at, format = "%a %b %e %T %z %Y")
-    
+
 	## Index each tweet by the day of its creation
     day.index = cut(tweets.date, breaks = "day")
-	
+
     ## Count how many tweets occurred on each day
     tmp <- sapply(levels(day.index),
       function(x) length(which(day.index==x)))
-	  
+
 	## Isolate the tweet frequencies
 	counts <- as.vector(tmp)
-	
+
 	## Plot tweet frequency by day
 	plot(1:length(counts), counts, type="o", lwd = 2,
          xlab = "Days", ylab = "Frequency",
@@ -187,11 +187,11 @@ Trending topics can quickly increase and decrease in popularity on Twitter. Visu
 The *zoo* package in R provides additional support for working with time/date information. To use the package, first install it:
 
     install.packages("zoo")
-	
+
 After loading the package...
 
     library(zoo)
-	
+
 ...the final plotting procedure can be improved to include the actual dates on the x-axis:
 
 	## Create x-axis increments for each day
@@ -202,7 +202,7 @@ After loading the package...
          xlab = "Days", ylab = "Frequency",
          main = "Tweet Frequency As A Function Of Days")
     grid(col = "darkgray")
-	
+
 <div style="padding:20px;margin-left:auto;margin-right:auto;"><img src="/images/twitter-time-series.png";></div>
 
 # Text Mining
@@ -257,8 +257,8 @@ Using the `head()` and `table()` functions, we can see the top 20 most frequent 
 
     head(table(freq), 20)
 
-### Word Co-Occurrences
-Word co-occurrences can be determined with the `findAssocs()` function in the TM package. The function below finds which terms co-occur with the word "love" and returns a vector of decimal percentages. If the returned value is `1.0` for a particular word, then it occurs in 100% of the same documents as the word "love." The `corlimit` argument allows you to decide a minimal percentage of co-occurrence to be returned. So, if you set the `corlimit` to `.5`, then any words that co-occur in less than 50% of the texts will be ignored. If sparse words have already been removed from the document, then it is generally best to set the `corlimit` to `0.0`. Using the `word.co` variable to save the returned vector, the following function determines word co-occurrence:
+### Word Correlations
+Word correlations can be determined with the `findAssocs()` function in the TM package. The function below finds which terms are most associated with the word "love" and returns a vector of decimal percentages. If the returned value is `1.0` for a particular word, then has a correlation coefficient of 1 in relationship to the word "love" in a given corpus. The `corlimit` argument allows users to determine a correlation threshold. So, if the `corlimit` argument is set to `.5`, then any words with a correlation coefficient of less than that will be ignored. For exploratory analyses, reducing the `corlimit` to `0.0` will return all correlations with a particular term, but for research purposes a minimum of `.5` is recommended (and depending on the research question or the claims made about particular associations `8.0` or higher may be necessary). Using the `word.co` variable to save the returned vector, the following function determines word co-occurrence:
 
     word.co <- findAssocs(dtm, "love", corlimit=0.0)
 
@@ -266,4 +266,42 @@ Using the `head()` function again, we can see the top 20 words that co-occur wit
 
     head(word.co, 20)
 
-Be careful when using word co-occurrence analyses over short periods of time with Twitter data. High volumes of retweets by users can create many 100% co-occurrence values. Retweets are designated with `RT` appearing at the beginning of a tweet's text, and it may be necessary for you to remove all retweeted tweets from your corpus. However, if your dataset has been collected over a long enough period of time, then retweets should not cause a problem. As always, it depends on your particular research question. 
+Be careful when using word correlation analyses with Twitter data over very short periods of time. High volumes of retweets by users can create many 100% correlation values. Retweets are designated with `RT` appearing at the beginning of a tweet's text, and it may be necessary for you to remove all retweeted tweets from your corpus. However, if your dataset has been collected over a long enough period of time (this is a relative determination based on the activity of a particular trend or dataset), then retweets should not cause a problem.
+
+### Word Association Graph
+The following data visualization is created using the Rgraphviz package and the TM package in R. The rationale for this visual is taken from the [initial publication about TM](https://www.jstatsoft.org/article/view/v025i05) in the *Journal of Statistical Software*. This cluster graph is useful for visualizing associations among the most frequent terms in a corpus of Tweets, and if `#` and `@` symbols are retained after cleaning a corpus, then it provides a visual for how the top terms in a corpus are associated with the top hashtags and username mentions. Using the data on the top word frequencies in the corpus, as shown above, the following code plots the associations among the top 30 words in a corpus:
+
+    # Reduces the list of the most frequent terms to the top 30
+    freq <- head(sort(freq, decreasing=TRUE), 30)
+
+    # Turn the frequency data type returned from TM (double) into an R data frame
+    freq <- data.frame(names(freq), as.numeric(freq))
+
+    # Rename the columns according to their contents
+    colnames(freq) <- c("Word", "Freq")
+
+    # Sets the low frequency threshold equal to the 30th term
+    lowNum <- tail(freq$Freq, 1)
+
+    # Sets the high frequency threshold equal to the top term
+    highNum <- head(freq$Freq, 1)
+
+    # The png() device saves the plot as an image to the working directory
+    png("corGraph.png", 800, 700)
+
+    # Calls additional attributions for changing the color and shape of nodes
+    defAttrs <- getDefaultAttrs()
+
+    # Creates the cluster graph. To change the correlation threshold for drawing
+    # the edges in the graph, adjust the correlation coefficient provided to the
+    # corThreashold argument
+    plot(dtm, terms=findFreqTerms(dtm, lowfreq=lowNum, highfreq=highNum),
+         corThreshold=0.1, attrs=list(node=list(shape = "ellipse", fixedsize = FALSE,
+                                                fillcolor="lightblue", height="2.6", width="10.5",
+                                                fontsize="14")))
+
+    # Saves the graph to file and closes the png() device                                            
+    dev.off()
+
+Using the above code, the following graph was created using data collected from Twitter's Rest API with the query "blacklivesmatter":
+<div style="padding:20px;margin-left:auto;margin-right:auto;"><img src="/images/corGraph.png";></div>

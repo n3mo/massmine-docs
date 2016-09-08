@@ -6,12 +6,12 @@ abstract:
   MassMine should run on most versions of Linux, FreeBSD, OpenBSD, and Mac OS X. Savvy users are encouraged to build MassMine from source (and share their experiences). Build instructions follow below.
 ...
 
-## Step 1: Download Current Version: 1.0.1 (2016-07-14)
+## Step 1: Download Current Version: 1.0.2 (2016-09-07)
 
 Download a copy of the latest version for your computer's architecture:
 <ul class="install-list">
-  <li><a href="http://www.massmine.org/downloads/massmine-1.0.1-linux-x86_64.zip"><i class="fa fa-download"></i>   MassMine for 64 bit Linux (zip)</a> | <b>MD5 checksum:</b> 31ffe2a8efd5d93720bdef3c2a4d32b4</li>
-  <li><a href="http://www.massmine.org/downloads/massmine-1.0.1-OSX-10.11.5.zip"><i class="fa fa-download"></i>   MassMine for OS X (zip)</a> | <b>MD5 checksum:</b> 81ad5fb8f75ecb8eee3d0cffd6bd95a3</li>
+  <li><a href="http://www.massmine.org/downloads/massmine-1.0.2-linux-x86_64.zip"><i class="fa fa-download"></i>   MassMine for 64 bit Linux (zip)</a> | <b>MD5 checksum:</b> 64d17c79ff54c914db8a0a332ef185b9</li>
+  <li><a href="http://www.massmine.org/downloads/massmine-1.0.2-OSX-10.10.5.zip"><i class="fa fa-download"></i>   MassMine for OS X (zip)</a> | <b>MD5 checksum:</b> cd1ddabe76eb50e2e0df7180ddff2d76</li>
 </ul>
 
 ## Step 2: Install

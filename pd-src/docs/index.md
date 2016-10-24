@@ -1,14 +1,29 @@
-<img src="https://github.com/n3mo/massmine/raw/master/img/splash.png" class="img-responsive" alt="responsive image" />
+---
+title: Getting Started
+abstract:
+  This page provides an overview of resources and tutorials for new MassMine users. MassMine is a command line software, and users who are not familiar with a terminal interface should consider completing the command line tutorial offered below. There are also tutorials below for installing MassMine, authenticating your Twitter account for data collection, and for learning how to collect data with MassMine.
+...
 
-MassMine is a research tool designed to simplify the collection and use of data from social media outlets.
+# Learn how to use the Command line
 
-Specifically, MassMine:
+If MassMine is the first command line software that you have used, we recommend completing an introductory command line tutorial. The tutorial offered by Code Academy is easy to follow and can be completed in about 30-45 minutes. The main things you need to learn from this (or any other command line tutorial) are how to navigate the directories within your computer (`cd`), how to copy/move/delete files when necessary (`cp`, `mv`, `rm`), how to list the files in your relative directory (`ls`), and how to find the current folder you are working within (`pwd`).
 
-* Is designed for use on personal computers or on servers/clusters.
-* Handles the acquisition of data from sites such as Twitter, Wikipedia, etc., including rate limits imposed by these services.
-* Makes setting up custom data requests easy, allowing for flexible deployment for individualized research needs.
-* Creates and manages databases of collected data automatically. This means that all tweets, trends, posts, etc. related to your research questions are saved permanently on your local hard drive.
-* Is designed for long-running data collection projects. MassMine makes it easy to create your own database of social media content spanning days, months, or years.
-* Balances ease of use with powerful flexibility:
-    * Offers access to social media APIs.
-    * Designed for the non-programmer looking to get into big data research, but offers additional functionality for power users.
+The Code Academy command line tutorial is available here: <https://www.codecademy.com/learn/learn-the-command-line>
+
+# MassMine Installation
+
+This video will walk you through installing MassMine for Linux and Mac operating systems.
+
+<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/Lh6y1YoY7bc" frameborder="0" allowfullscreen></iframe>
+
+# Twitter Authentication for MassMine
+
+This video will show you how to authenticate MassMine with Twitter so that you can begin collecting data.
+
+<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/wsBKFjP8NQQ" frameborder="0" allowfullscreen></iframe>
+
+# Learning to Collect Data with MassMine
+
+This video shows you the basics of collecting data with MassMine.
+
+<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/Bm6z7K0k3Vg" frameborder="0" allowfullscreen></iframe>

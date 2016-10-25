@@ -256,7 +256,7 @@ Using the `head()` and `table()` functions, we can see the top 20 most frequent 
 
     head(table(freq), 20)
 
-### Word Correlations
+## Word Correlations
 Word correlations can be determined with the `findAssocs()` function in the TM package. The function below finds which terms are most associated with the word "love" and returns a vector of decimal percentages. If the returned value is `1.0` for a particular word, then has a correlation coefficient of 1 in relationship to the word "love" in a given corpus. The `corlimit` argument allows users to determine a correlation threshold. So, if the `corlimit` argument is set to `.5`, then any words with a correlation coefficient of less than that will be ignored. For exploratory analyses, reducing the `corlimit` to `0.0` will return all correlations with a particular term, but for research purposes a minimum of `.5` is recommended (and depending on the research question or the claims made about particular associations `0.8` or higher may be necessary). Using the `word.co` variable to save the returned vector, the following function determines word co-occurrence:
 
     word.co <- findAssocs(dtm, "love", corlimit=0.0)
@@ -267,7 +267,7 @@ Using the `head()` function again, we can see the top 20 words that co-occur wit
 
 Be careful when using word correlation analyses with Twitter data over very short periods of time. High volumes of retweets by users can create many 100% correlation values. Retweets are designated with `RT` appearing at the beginning of a tweet's text, and it may be necessary for you to remove all retweeted tweets from your corpus. However, if your dataset has been collected over a long enough period of time (this is a relative determination based on the activity of a particular trend or dataset), then retweets should not cause a problem.
 
-### Word Association Graph
+## Word Association Graph
 The following data visualization is created using the Rgraphviz package and the TM package in R. The rationale for this visual is taken from the [initial publication about TM](https://www.jstatsoft.org/article/view/v025i05) in the *Journal of Statistical Software*. This cluster graph is useful for visualizing associations among the most frequent terms in a corpus of Tweets, and if `#` and `@` symbols are retained after cleaning a corpus, then it provides a visual for how the top terms in a corpus are associated with the top hashtags and username mentions. Using the data on the top word frequencies in the corpus, as shown above, the following code plots the associations among the top 30 words in a corpus:
 
     # Reduces the list of the most frequent terms to the top 30

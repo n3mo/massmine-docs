@@ -46,7 +46,7 @@ Technically savvy users can build the massmine application from source. Does thi
 
 ## Use The Source
 
-To build MassMine from source, you will need [Chicken Scheme](http://www.call-cc.org/) installed on your system. 
+To build MassMine from source, you will need [Chicken Scheme](http://www.call-cc.org/) installed on your system.
 
 Additionally, you will need the following [Eggs](http://wiki.call-cc.org/eggs) installed:
 
@@ -58,12 +58,12 @@ Additionally, you will need the following [Eggs](http://wiki.call-cc.org/eggs) i
 * pathname-expand
 * html-parser
 
-The openssl egg requires the openssl development libraries installed on your system. These can be installed with most package managers (e.g., apt-get, pacman, brew, etc.). 
+The openssl egg requires the openssl development libraries installed on your system. These can be installed with most package managers (e.g., apt-get, pacman, brew, etc.).
 
 For example, on Ubuntu:
 
     sudo apt-get install libssl-dev
-	
+
 Assuming Chicken Scheme has been properly installed, these eggs (packages) can be installed in a single command:
 
     chicken-install clucker args openssl medea srfi-19 pathname-expand html-parser
@@ -73,14 +73,11 @@ Building MassMine is simple once Chicken is properly installed:
 ### Clone the git repository into a directory of your choice
 
     git clone https://github.com/n3mo/massmine.git
-	
+
 ### Compile MassMine into a single executable
 
 From within the root folder of the cloned repo run:
 
     csc massmine.scm
-	
+
 which will create a single executable called `massmine`. Put that executable on your path and you should be ready to go.
-
-
-

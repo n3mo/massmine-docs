@@ -57,6 +57,7 @@ Additionally, you will need the following [Eggs](http://wiki.call-cc.org/eggs) i
 * srfi-19
 * pathname-expand
 * html-parser
+* test
 
 The openssl egg requires the openssl development libraries installed on your system. These can be installed with most package managers (e.g., apt-get, pacman, brew, etc.).
 
@@ -66,13 +67,90 @@ For example, on Ubuntu:
 
 Assuming Chicken Scheme has been properly installed, these eggs (packages) can be installed in a single command:
 
-    chicken-install clucker args openssl medea srfi-19 pathname-expand html-parser
+    chicken-install clucker args openssl medea srfi-19 pathname-expand html-parser test
 
 Building MassMine is simple once Chicken is properly installed:
 
 ### Clone the git repository into a directory of your choice
 
     git clone https://github.com/n3mo/massmine.git
+
+### Test massmine
+
+MassMine comes with a test suite. Before compiling, run the unit tests from within the cloned massmine directory:
+
+    ./massmine.scm --test ./tests/run.scm
+	
+If all goes well, you should see a series of successes similar to the following:
+
+    -- testing MassMine Core -----------------------------------------------------
+    Examples ............................................................. [ PASS]
+    Arg Options .......................................................... [ PASS]
+    String prefix checking ............................................... [ PASS]
+    Date handling ........................................................ [ PASS]
+    4 tests completed in 0.002 seconds.
+    4 out of 4 (100%) tests passed.
+    -- done testing MassMine Core ------------------------------------------------
+     
+     
+    -- testing Google Module -----------------------------------------------------
+    Google task descriptions ............................................. [ PASS]
+    Google task options .................................................. [ PASS]
+    Country Code Identification .......................................... [ PASS]
+    Google country trends ................................................ [ PASS]
+    Google trends ........................................................ [ PASS]
+    5 tests completed in 16.72 seconds.
+    5 out of 5 (100%) tests passed.
+    -- done testing Google Module ------------------------------------------------
+     
+     
+    -- testing Tumblr Module -----------------------------------------------------
+    Tumblr task descriptions ............................................. [ PASS]
+    Tumblr task options .................................................. [ PASS]
+    Tumblr hostname parsing [1/2] ........................................ [ PASS]
+    Tumblr hostname parsing [2/2] ........................................ [ PASS]
+    4 tests completed in 0.002 seconds.
+    4 out of 4 (100%) tests passed.
+    -- done testing Tumblr Module ------------------------------------------------
+     
+     
+    -- testing Twitter Module ----------------------------------------------------
+    Twitter task descriptions ............................................ [ PASS]
+    Twitter task options ................................................. [ PASS]
+    Search rate limit .................................................... [ PASS]
+    Trends rate limit .................................................... [ PASS]
+    Timeline rate limit .................................................. [ PASS]
+    Friends rate limit ................................................... [ PASS]
+    Followers rate limit ................................................. [ PASS]
+    7 tests completed in 0.004 seconds.
+    7 out of 7 (100%) tests passed.
+    -- done testing Twitter Module -----------------------------------------------
+     
+     
+    -- testing Web Module --------------------------------------------------------
+    Web task descriptions ................................................ [ PASS]
+    Web task options ..................................................... [ PASS]
+    Web url to string capture ............................................ [ PASS]
+    Web text extraction .................................................. [ PASS]
+    4 tests completed in 0.973 seconds.
+    4 out of 4 (100%) tests passed.
+    -- done testing Web Module ---------------------------------------------------
+     
+     
+    -- testing Wikipedia Module --------------------------------------------------
+    Wikipedia task descriptions .......................................... [ PASS]
+    Wikipedia task options ............................................... [ PASS]
+    Wikipedia url builder ................................................ [ PASS]
+    Number padding ....................................................... [ PASS]
+    Month counter ........................................................ [ PASS]
+    Date span aggregator ................................................. [ PASS]
+    Wikipedia page links ................................................. [ PASS]
+    Wikipedia search ..................................................... [ PASS]
+    Wikipedia text ....................................................... [ PASS]
+    Wikipedia views ...................................................... [ PASS]
+    10 tests completed in 9.85 seconds.
+    10 out of 10 (100%) tests passed.
+    -- done testing Wikipedia Module ---------------------------------------------
 
 ### Compile MassMine into a single executable
 

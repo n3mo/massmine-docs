@@ -46,14 +46,27 @@ Returns the full text (plain text, with formatting removed) of a given Wikipedia
 
 # wikipedia-views
 
-Returns the daily page views for a given Wikipedia page for a given month.
+Returns the daily page views for a given Wikipedia page for a given date range
 
 ## Parameters
 
 - **query***: Wikipedia page title, case sensitive.
-- **lang***: Wikipedia language (e.g., en for English, sp for Spanish, etc.)
-- **date***: Month, as YYYY-MM-DD (day is ignored)
+- **date***: Date range, as YYYY-MM-DD:YYYY-MM-DD or YYYY-MM-DD-HH:YYYY-MM-DD-HH
 
 ## Example
 
-    massmine --task=wikipedia-views --query=Earl_Grey_tea --lang=en --date=2015-09-01 
+    massmine --task=wikipedia-views --query=Earl_Grey_tea --date=2018-03-01:2018-03-15
+
+# wikipedia-trends
+
+Returns the 1000 most viewed articles on Wikipedia for a given month or day.
+
+## Parameters
+
+- **date** YYYY-MM or YYYY-MM-DD
+
+## Example
+
+    massmine --task=wikipedia-trends --date=2018-04
+    ## Or, for a specific day
+	massmine --task=wikipedia-trends --date=2018-04-05

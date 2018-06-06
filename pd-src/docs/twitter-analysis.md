@@ -15,7 +15,7 @@ MassMine returns data from all sources as JSON. Depending on your analysis workf
 
     # Convert the JSON from above into .csv, keeping the
     # "text" and "user:screen_name" fields
-   jsan --input=mydata.json --output=mydata.csv --keep text user:screen_name
+    jsan --input=mydata.json --output=mydata.csv --keep text user:screen_name
 
 Which data fields are available for conversion to csv? This depends on what you have requested from Twitter. If you have collected Twitter data using massmine into a file called "mydata.json", you can determine which "columns" (i.e., which data fields) are available with `jsan` using the `--list` option. The values printed by the following command can be passed to `jsan` with either the `--keep` or `--remove` options.
 
@@ -303,4 +303,4 @@ The following data visualization is created using the Rgraphviz package and the 
     dev.off()
 
 Using the above code, the following graph was created using data collected from Twitter's Rest API with the query "blacklivesmatter":
-<div style="padding:20px;margin-left:auto;margin-right:auto;"><img src="/images/corGraph.png";></div>
+<img src="/images/corGraph.png" class="img-responsive" alt="responsive image" />

@@ -11,7 +11,7 @@ rm -rf ./out/*
 ## Copy static files to output directory
 #######################################################
 cp src/google8d16c3ad254f56af.html out
-cp -R src/images out
+cp -pR src/images out
 cp pd-src/index.html out
 cp -pR server-files/* out
 cp pd-src/style.css out/css
@@ -98,3 +98,8 @@ pandoc ./pd-src/docs/twitter-analysis.md \
 --toc \
 --toc-depth=2 \
 --number-sections
+
+#######################################################
+## Set proper permissions
+#######################################################
+chmod 755 out/*

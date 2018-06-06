@@ -49,20 +49,6 @@ Returns the full text (plain text, with formatting removed) of a given Wikipedia
     massmine --task=wikipedia-text --query=Earl_Grey_tea
 
 <br></br><br></br>
-<div class="task">wikipedia-views</div>
-
-Returns the daily page views for a given Wikipedia page for a given date range
-
-### Parameters
-
-- **query***: Wikipedia page title, case sensitive.
-- **date***: Date range, as YYYY-MM-DD:YYYY-MM-DD or YYYY-MM-DD-HH:YYYY-MM-DD-HH
-
-### Example
-
-    massmine --task=wikipedia-views --query=Earl_Grey_tea --date=2018-03-01:2018-03-15
-
-<br></br><br></br>
 <div class="task">wikipedia-trends</div>
 
 Returns the 1000 most viewed articles on Wikipedia for a given month or day.
@@ -76,3 +62,18 @@ Returns the 1000 most viewed articles on Wikipedia for a given month or day.
     massmine --task=wikipedia-trends --date=2018-04
     ## Or, for a specific day
 	massmine --task=wikipedia-trends --date=2018-04-05
+
+<br></br><br></br>
+<div class="task">wikipedia-views</div>
+
+Returns the daily page views for a given Wikipedia page for a given date range
+
+### Parameters
+
+- **query***: Wikipedia page title, case sensitive.
+- **date***: Date range, as YYYY-MM-DD:YYYY-MM-DD or YYYY-MM-DD-HH:YYYY-MM-DD-HH
+
+### Example
+
+    massmine --task=wikipedia-views --query=Earl_Grey_tea --date=2018-03-01:2018-03-15
+

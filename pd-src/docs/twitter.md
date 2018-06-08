@@ -120,7 +120,7 @@ Returns tweets as they occur in *real time*, matching either a search phrase, a 
 ## Example
 
 	# Search by keyword, with a max count OR deadline
-    massmine --task=twitter-stream --query=love --count=300 --dur='2015-10-11 14:30:00' --count=50
+    massmine --task=twitter-stream --query=love --count=300 --dur='2015-10-11 14:30:00'
 
     # Track a user in real time (may only make sense for HIGHLY active accounts).
     # Here we track multiple users

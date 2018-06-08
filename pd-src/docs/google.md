@@ -7,7 +7,7 @@ Task parameters marked * are required. For parameters marked with a + choose onl
 
 <hr/>
 
-#google-country-trends
+# google-country-trends
 
 Returns the top 20 trending search phrases on Google for each documented country on Google trends.
 
@@ -19,7 +19,7 @@ Returns the top 20 trending search phrases on Google for each documented country
 
     massmine --task=google-country-trends
 
-#google-trends
+# google-trends
 
 Returns the top 20 trending search phrases, along with meta data including the lower bound on number of searches, on Google for the United States for a given date.
 

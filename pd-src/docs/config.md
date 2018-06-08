@@ -2,7 +2,7 @@
 title: Using MassMine
 ...
 
-#Introduction
+# Introduction
 MassMine's behavior is controlled via options set either directly on the command line, or by using a configuration file (or a combination of both). For most options, MassMine accepts short and long versions. For example, the following long format command
 
     massmine --count=50
@@ -18,37 +18,49 @@ MassMine ships with built-in help to familiarize users with features. See what o
 
     massmine --help
 
-<div class="raw">
-Usage: massmine ... [options...]<br>
-<br>
-&#160; -h, --help&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Help information<br>
-&#160; -v, --version&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Version information<br>
-&#160; -p, --project=NAME&#160;&#160;&#160;&#160;&#160;Create project<br>
-&#160; -a, --auth=FILE&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Credentials file<br>
-&#160; -o, --output=FILE&#160;&#160;&#160;&#160;&#160;&#160;Write to file<br>
-&#160; -t, --task=TASK&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Task name<br>
-&#160; -q, --query=QUERY&#160;&#160;&#160;&#160;&#160;&#160;Query string<br>
-&#160; -c, --count=NUM&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Number of records<br>
-&#160; -d, --dur=SECOND&#160;&#160;&#160;&#160;&#160;&#160;&#160;Max runtime<br>
-&#160; -g, --geo=LOCATION&#160;&#160;&#160;&#160;&#160;Location<br>
-&#160; -l, --lang=LANG&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Language<br>
-&#160; -u, --user=NAME&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Screen name<br>
-&#160;&#160;&#160;&#160;&#160;&#160;--date=YYYYMMDD&#160;&#160;&#160;&#160;Date (or date range)<br>
-&#160;&#160;&#160;&#160;&#160;&#160;--config=FILE&#160;&#160;&#160;&#160;&#160;&#160;Config file<br>
-&#160;&#160;&#160;&#160;&#160;&#160;--no-splash&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Inhibit splash screen<br>
-</div>
+This will produce some helpful clues on how to get started. Depending on your version, you should see output similar to the following:
+
+    Usage: massmine ... [options...]
+     
+     -h, --help               Help information
+     -v, --version            Version information
+     -p, --project=ARG        Create project
+     -a, --auth=ARG           Credentials file
+     -o, --output=ARG         Write to file
+     -t, --task=ARG           Task name
+     -q, --query=ARG          Query string
+     -c, --count=ARG          Number of records
+     -d, --dur=ARG            Max runtime
+     -g, --geo=ARG            Location
+     -l, --lang=ARG           Language
+     -u, --user=ARG           Screen name
+         --date=ARG           Date (or date range)
+         --config=ARG         Config file
+         --no-splash          Inhibit splash screen
+         --test=ARG           Development tests
+     
+    Retrieve and store data from web sources
+     
+    See 'massmine -h <option>' to read about a specific topic
+        'massmine -h task' will, for example, display help about the 'task' option
+    or  'massmine -h task-options' for options supported by each task 
+    or  'massmine -h examples' for detailed examples
+     
+    Full documentation can be found at http://www.massmine.org
+    Report bugs to nemo1211 at gmail.
 
 The help printout indicates what options are available, and which can be used with the short or long format syntax.
 
 The help option also accepts keywords matching the available options. For example, to learn more about the --count option you can run
 
     massmine --help count
+	
+The above help command produces
 
-<div class="raw">
-Request a number of records for tasks that accept limits<br>
-Example(s): 'massmine --count=100'<br>
-&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;'massmine -c 100'<br>
-</div>
+    Request a number of records for tasks that accept limits
+     
+    Example(s): 'massmine --count=100'
+                'massmine -c 100'
 
 In addition to per-option help, example commands for collecting data are provided with
 
@@ -81,11 +93,9 @@ Most tasks, however, accept additional optional and/or required information as d
 
 Once you know which task you would like, you are ready to compose a data collection request. Let's assume you would like to search for tweets on Twitter that contain the keyword "love". Using `massmine --help task` we learn that the appropriate task to use is called "twitter-search". Next, we use `massmine --help task-options` to determine which options the twitter-search task accepts. We find:
 
-<div class="raw">
-twitter-search -- query* count geo lang
-</div>
+    twitter-search -- query* count geo lang
 
-It seems that we must include the --query option. We can also optionally specify --count --geo and --lang. Let's assume that we would like to collect 200 tweets matching the query "love". We can now compose our custom data request:
+It seems that we must include the `--query` option. We can also optionally specify `--count` `--geo` and `--lang`. Let's assume that we would like to collect 200 tweets matching the query "love". We can now compose our custom data request:
 
     massmine --task=twitter-search --count=200 --query=love
 

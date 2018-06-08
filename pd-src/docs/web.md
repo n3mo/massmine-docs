@@ -7,7 +7,7 @@ Task parameters marked * are required. For parameters marked with a + choose onl
 
 <hr/>
 
-#web-text
+# web-text
 
 Returns the text from one or more supplied URLs with html tags removed. If you only want the plain text from a webpage, and don't care about the underlying structure (lists, tables, etc.), then this is the quickest method for extracting webpage content.
 

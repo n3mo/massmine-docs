@@ -13,7 +13,7 @@ Task parameters marked * are required. For parameters marked with a + choose onl
 
 <hr/>
 
-#tumblr-auth
+# tumblr-auth
 
 Sets up MassMine to make data requests under your Tumblr account privileges. This task *must* be ran before using any other Tumble tasks, or an error will be returned.
 
@@ -25,7 +25,7 @@ Sets up MassMine to make data requests under your Tumblr account privileges. Thi
 
     massmine --task=tumblr-auth
 
-#tumblr-blog-info
+# tumblr-blog-info
 
 Retrieve meta data information about 1 or more blogs, including the number of posts, description, and more.
 
@@ -47,7 +47,7 @@ Retrieve meta data information about 1 or more blogs, including the number of po
 	# Tumblr blogs with custom URLs can also retrieved
     massmine --task=tumblr-blog-info --query=www.exampleblog.com
 
-#tumblr-posts
+# tumblr-posts
 
 Retrieve posts from 1 or more blogs. The raw text of each post is returned with meta data.
 
@@ -70,7 +70,7 @@ Retrieve posts from 1 or more blogs. The raw text of each post is returned with 
 	# Tumblr blogs with custom URLs can also retrieved
     massmine --task=tumblr-posts --query=www.exampleblog.com --count=10
 
-#tumblr-tag
+# tumblr-tag
 
 Search for blog posts containing 1 or more tags. The raw text of each post is returned with meta data.
 

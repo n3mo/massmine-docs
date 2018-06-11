@@ -3,7 +3,7 @@ title: MassMine Installation
 abstract:
   MassMine is designed to run on Linux and Mac OSX. Pre-built, self-contained application bundles are available for both. Installation is as simple as downloading the latest zip or tarball and unpacking the files. Currently, versions are available for 64 bit operating systems.
 
-  MassMine should run on most versions of Linux, FreeBSD, OpenBSD, and Mac OS X. Savvy users are encouraged to build MassMine from source (and share their experiences). Build instructions follow below.
+  MassMine should run on most versions of Linux, FreeBSD, OpenBSD, Mac OS X, and the Raspberry Pi (Raspbian OS). Savvy users are encouraged to build MassMine from source (and share their experiences). Build instructions follow below.
 ...
 
 ## Step 1: Download Current Version: 1.1.0 (2018-06-06)
@@ -11,7 +11,8 @@ abstract:
 Download a copy of the latest version for your computer's architecture:
 <ul class="install-list">
   <li><a href="http://www.massmine.org/downloads/massmine-1.1.0-linux-x86_64.zip"><i class="fa fa-download"></i>   MassMine for 64 bit Linux (zip)</a> | <b>MD5 checksum:</b> df6e6008544a3f0551dbfba97e716c59</li>
-  <li><a href="http://www.massmine.org/downloads/massmine-1.0.2-OSX-10.10.5.zip"><i class="fa fa-download"></i>   MassMine for OS X (zip)</a> | <b>MD5 checksum:</b> cd1ddabe76eb50e2e0df7180ddff2d76</li>
+  <li><a href="http://www.massmine.org/downloads/massmine-1.0.2-OSX-10.10.5.zip"><i class="fa fa-download"></i>   MassMine for macOS (zip)</a> | <b>MD5 checksum:</b> cd1ddabe76eb50e2e0df7180ddff2d76</li>
+  <li><a href="http://www.massmine.org/downloads/massmine-1.1.0-linux-ARM.zip"><i class="fa fa-download"></i>   MassMine for Raspberry Pi--Raspbian OS (zip)</a> | <b>MD5 checksum:</b> b21b6932bbb0bcb42207b79dc3db2568</li>
 </ul>
 
 ## Step 2: Install
